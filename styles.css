@@ -1,0 +1,28 @@
+@charset"UTF-8";
+div{
+  
+  border: solid 3px black;
+  width:200px;
+  padding: 50px;
+  background-color: rosybrown;
+  border-radius:40px 0px 40px 0px;
+}
+ h2{
+   background: linear-gradient(sandyBrown,saddleBrown);
+  }
+  body {
+    text-align: center;
+    
+      background-color: lightpink;
+      color: black;
+      font: normal 20pt Italic;
+    padding: 30px;
+    border: solid 3px black;
+    background-color:lavender;
+    border-radius: 10px;
+    
+}
+img{
+  width: 100%;
+}
+
