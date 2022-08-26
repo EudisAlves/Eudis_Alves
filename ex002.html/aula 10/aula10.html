@@ -8,14 +8,14 @@
 
     <style>
         div#area {
-          background: rgb(95, 241, 95);  
+          background: green;  
           color: antiquewhite;
           width: 200px; /* width e height servem para direcionar o conteudo */
           height: 200px;
           line-height: 200px;
           text-align: center; /* alinha o texto */
           border: solid 03px black; /* esse para escolher a cor da borda */
-          border-radius: 25px; /*esse comando permite que as quina das bordas sejam arredondadas*/
+          border-radius: 50px 0px 50px 0px; /*esse comando permite que as quina das bordas sejam arredondadas*/
            }  
     </style>
 </head>
@@ -25,12 +25,12 @@
     </div>
 
 
-    <script>
+    <script> // eu posso procurar erros isando o inspecionar da pagina web //
 
         var a = window.document.getElementById('area')
             a.addEventListener('click',clicar)
-            a.addEventListener('entrar', entrar)
-            a.addEventListener('sair', sair )
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair )
 
 
         function clicar() {
@@ -39,7 +39,7 @@
         }
         function entrar() {
             a.innerText ='entrou!'
-            a.style.background = 'green'
+            a.style.background = 'yellow'
         }
         function sair() {
             a.innerText = 'saiu!'
