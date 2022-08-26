@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Números</title>
+    <style>
+        body {
+            background: rgb(236, 184, 247);
+            font: normal 18pt Arial;
+            border: solid 4px;
+        }
+        input {
+            font: nomal 18pt Arial;
+            width: 100px;
+        }
+        div {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Somando valores</h1>
@@ -21,7 +35,7 @@
             var n1 = window.Number(tn1.value)
             var n2 = window.Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `A soma dente ${n1} e ${n2} é igual a ${s}`
+            res.innerHTML = `A soma dente ${n1} e ${n2} é:<br> igual a <strong>${s}</strong>`
         }
     </script>
 </html>
