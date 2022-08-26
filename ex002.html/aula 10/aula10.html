@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de evetos no DOM</title>
+</head>
+<style>
+    div#area {
+      background: rgb(95, 241, 95);  
+      color: antiquewhite;
+      width: 200px; /* width e height servem para direcionar o conteudo */
+      height: 200px;
+      line-height: 200px;
+      text-align: center; /* alinha o texto */
+      border: solid 03px black; /* esse para escolher a cor da borda */
+      border-radius: 25px; /*esse comando permite que as quina das bordas sejam arredondadas*/
+       }  
+</style>
+<body>
+    <div id="area" onclik="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja...
+    </div>
+
+
+    <script>
+
+        var area = window.document.getElementById('area')
+
+        function clicar() {
+            area.innerText = 'clicou!'
+            area.style.background = 'red'
+        }
+        function entrar {
+            area = 'entrou!'
+            area.style.background = 'green'
+        }
+        function sair {
+            area = 'saiu!'
+        }
+    </script>
+</body>
+</html>
