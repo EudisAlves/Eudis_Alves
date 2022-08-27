@@ -8,7 +8,7 @@
 </head>
 <body>
       <h1>Sistema de multas</h1>
-      Velocidade do carro: <input type="number" name="txtvel"> km/h
+      Velocidade do carro: <input type="number" neme="txtvel" id="txtvel"> km/h
       <input type="button" value="Verificar" onclick="calcular()">
       <div id="res">
 
@@ -17,10 +17,10 @@
         function calcular() {
             var txtv = window.document.querySelector('input#txtvel')
             var res = window.document.querySelector('div#res')
-            var vel = Number(txtv.value)
+            var vel = Number(txtv.value) // esse comando foi utilizado pra fazer a converção de string para numero.//
             res.innerHTML = `Sua velocidade atual é de <strong>${vel}km/h</strong>`
-            if (vel > 60) {
-                res.innerHTML += `<p>Você está multado por excesso de velocidade</p>`
+            if (vel > 60) { // if pronuncia como ( e sí)//
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>`
             }
             res.innerHTML += `<p>Dirija sempre com cinto de seguraça!</p>`
         }  
