@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudo de Condições</title>
-
-</head>
-<body>
-    
-    
-</body>
-</html>
+var vel = 78.5
+console.log(`A velocidade do seu  carro é ${vel}km/h`)
+if (vel > 60) {
+    console.log(`Você ultrapassou a velocidade permitida. Multado!`)
+}
+console.log (`Dirija sempre usando o cinto de segurança!`)
