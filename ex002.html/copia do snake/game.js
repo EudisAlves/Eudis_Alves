@@ -168,11 +168,99 @@ function setup() {
         ctx.fillStyle = 'red';
         ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
         if(stopped) {
-            ctx.fillStyle = 'rgba(250,250,250,0.8)';
-            ctx.fillRect(fruit.x * gridSize+1, fruit.y * gridSize+1, gridSize-2, gridSize-2);
-        
-        if (stopped) {
-            
+                ctx.fillStyle = 'rgba(250,250,250,0.8)';
+                ctx.font = "small-caps bold 14px Helvetica";
+                ctx.fillText("press ARROW KEYS to START...", 24, 374);
         }
-        ctx.fillStyle = 'white';        
+  
+        ctx.fillStyle = 'white';
+        ctx.font = "small-caps bold 16px Helvetica";
+        ctx.fillText("point: " + points, 288, 40);
+        ctx.fillText("top: " + pointsMax, 292, 60);
+        
+        return reward;
+    }    
 }
+
+function keyPush (evt) {
+    switch(evt.keyCode) {
+        case 37: 
+        game.action.left();
+        evt.preventDefault();
+        break;
+
+        case 38:
+        game.action.up();
+        evt.preventDefault();
+        break
+        
+        case 39:
+        game.action.right();
+        evt.preventDefault();
+        break
+
+        case 40:
+        game.action.down();
+        evt.preventDefault();
+        break
+
+        case 32:
+        Snake.pause();
+        evt.preventDefault();
+        break
+
+        case 27:
+        game.reset();
+        evt.preventDefault();
+        break
+    }
+}
+
+return {
+    start: function (fps = 15):
+        Window,onload = setup;
+        intervalID = setInterval(game.loop, 1000 / fps);
+    },
+    loop: game.loop,
+    reset: game.reset,
+
+    stop: function() {
+        clearInterval(intervalID);
+    }
+
+    setup: {
+        Keyboard: function(state) {
+            if (state) {
+                document.addEventListener('keydown', keyPush);
+            } else {
+                document.removeEventListener('keydown', keyPush);
+        }
+        },
+        walls: function (state) {
+        walls = state;
+        },
+        tileCount: function(size) {
+        tileCount = size;
+        gridSize = 400 / tileCount;
+        },
+    }
+
+    action: function(act) {
+        switch(act) {
+            case 'left';
+                game.action.left();
+                break;
+
+            case 'up';
+                game.action.up;
+                break;
+
+            case 'rigth';
+                game.action.'rigth';
+                break;
+                
+            case 'down';
+                game.action. 'down';
+                break;    
+        }
+    }
