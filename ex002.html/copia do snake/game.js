@@ -234,16 +234,16 @@ return {
                 document.addEventListener('keydown', keyPush);
             } else {
                 document.removeEventListener('keydown', keyPush);
-        }
+            }
         },
         walls: function (state) {
-        walls = state;
+            walls = state;
         },
         tileCount: function(size) {
         tileCount = size;
         gridSize = 400 / tileCount;
-        },
-    }
+        }
+    },
 
     action: function(act) {
         switch(act) {
@@ -263,4 +263,25 @@ return {
                 game.action. 'down';
                 break;    
         }
+    },
+    pause: function () {
+        velocity.x = 0;
+        velocity.y = 0;
+    },
+
+    clearTopScore: function () {
+        pointsMax 0;
+    },
+
+    data: {
+        player: player,
+        fruit: fruit,
+        tail: function() {
+            return tail;
+        }
+    },
+    info: {
+        tileCount: tileCount
     }
+};
+
