@@ -13,15 +13,14 @@ var player = { x: INITIAL_PLAYER.x, y:INITIAL_PLAYER.y };
 
 var walls = false;
 
-var fruit = { x:1; y:1};
+var fruit = { x:1, y:1};
 
 var tail = [];
 var tail = INITIAL_TAIL;
 
 var reward = 0;
 var points = 0;
-  pointsMax = 0:
-
+  pointsMax = 0;
 var ActionEnum = { 'none':0, 'up':1, 'down':2, 'left':3, 'right':4 };
 Object.freeze(ActionEnum);
 var lastAction = ActionEnum.none;
