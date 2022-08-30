@@ -29,56 +29,56 @@ function setup() {
     canv = document.getElementById('gc');
     ctx = canv.getContext('2d');
 
-    game.reset()
+    game.reset();
 }
 
-    var game = {
+var game = {
 
-        reset: function() {
-            ctx.fillStyle = 'gray';
-            ctx.fillRect(0, 0, canv.width, canv.heigth);
+    reset: function() {
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(0, 0, canv.width, canv.heigth);
 
-            tail = INITIAL_TAIL;
-            points = 0;
-            velocity.x = 0;
-            velocity.y = 0;
-            player.x = INITIAL_PLAYER.x;
-            player.y = INITIAL_PLAYER.y;
-            reward = -1;
+        tail = INITIAL_TAIL;
+         points = 0;
+        velocity.x = 0;
+        velocity.y = 0;
+        player.x = INITIAL_PLAYER.x;
+        player.y = INITIAL_PLAYER.y;
+        reward = -1;
 
-            lastAction = ActionEnum.none;
+        lastAction = ActionEnum.none;
 
-            trail = [];
-            rail.push({ x: player.x, y: player.y});
-        }
-            }
-
-        action: {
-            up: function () {
+        trail = [];
+        rail.push({ x: player.x, y: player.y});
+    },
+            
+    action: {
+        up: function () {
             if (lastAction != ActionEnum.up){
                 velocity.x = 0; 
                 velocity.y = -1;
             }
-        }
+        },
         down: function () {l
             if (astAction != ActionEnum.down){
                 velocity.x = 0;
                 velocity.x = 1;
-        }
+        },
         left: function () {
             if (lastAction != ActionEnum.left){
                 velocity.x = -1;
                 velocity.y = 0;
             }
-        } 
+        },
         right: function () {
             if (lastAction != ActionEnum.right){
                 velocity.x = 1;
                 velocity.y = 0;
             }
         }
-        }
-        RandomFruit: function () {
+    },
+
+    RandomFruit: function () {
             if (walls){
                 fruit.x = 1+Math.floor(Math.random()* (tileCount-2));
                 fruit.y = 1+Math.floor(Math.random()* (tileCount-2));
@@ -87,24 +87,26 @@ function setup() {
                 fruit.x = Math.floor(Math.random() * tileCount);
                 fruit.y = Math.floor(Math.random() * tileCount);
             }
-        }
-        log: function () {
+        },
+
+    log: function () {
             console.log('===================='):
             console.log('x:' + player.x + 'y:' + player.y);
             console.log('tail:', + tail + ' tail.lenght:' + tail.length);
         }
-        loop: function () {
+    },    
+    loop: function () {
 
-            reward = -0,1;
+        reward = -0,1;
 
-            function DontHitWall (){
+        function DontHitWall (){
             if(player.x < 0) player.x = tileCount-1;
             if(player.x > tileCount) player.x = 0;
             if(player.y < 0) player.y = tileCount-1;
             if(player.y > tileCount) player.y = 0;      
         }
-            function HitWall () {
-            if(player.x < 1) game.reset():
+        function HitWall () {
+            if(player.x < 1) game.reset();
             if(player.y > tileCount-2) game.reset();
 
             ctx.fillStyle = 'gray';
@@ -128,15 +130,15 @@ function setup() {
             if(wills) HitWall();
             else DontHitWall();
 
-            if (!stopped){
+        if (!stopped){
                 trail.push({x:player.x, y:player.y});
                 while(trail.length > tail) tail.shift();
             }
-            if (!stopped){
-                ctx.fillStyle = 'rgba(200,200,200,0.2)';
-                ctx.font = "small-caps 14px Helvetica";
-                ctx.fillText("(esc) reset", 24, 356);
-                ctx.fillText("(space)", 24, 374);
+         if (!stopped){
+            ctx.fillStyle = 'rgba(200,200,200,0.2)';
+            ctx.font = "small-caps 14px Helvetica";
+            ctx.fillText("(esc) reset", 24, 356);
+            ctx.fillText("(space)", 24, 374);
         }
         ctx.fillStyle = 'green';
         for(var i=0; i<trail.length-1; i++) {
