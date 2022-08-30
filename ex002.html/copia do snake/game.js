@@ -1,3 +1,5 @@
+var Snake = (function (){
+
 var INITIAL_TAIL = 4;
 var fixedTail = true;
 
@@ -59,10 +61,11 @@ var game = {
                 velocity.y = -1;
             }
         },
-        down: function () {l
+        down: function () {
             if (astAction != ActionEnum.down){
                 velocity.x = 0;
                 velocity.x = 1;
+            }
         },
         left: function () {
             if (lastAction != ActionEnum.left){
@@ -90,11 +93,11 @@ var game = {
         },
 
     log: function () {
-            console.log('===================='):
+            console.log('====================');
             console.log('x:' + player.x + 'y:' + player.y);
             console.log('tail:', + tail + ' tail.lenght:' + tail.length);
         }
-    },    
+       
     loop: function () {
 
         reward = -0,1;
@@ -115,7 +118,7 @@ var game = {
             ctx.fillRect(canv.width-gridSize+1,0,gridSize,canv.heigth);
             ctx.fillRect(0,canv.heigth-gridSize+1,canv.width,gridSize);
         }
-        var stopped = velocity.x == 0 && velocity.y == 0 &&;
+        var stopped = velocity.x == 0 && velocity.y == 0 && velocity.y == 0;
             player.x += velocity.x;
             player.y += velocity.y;
 
@@ -193,32 +196,32 @@ function keyPush (evt) {
         case 38:
         game.action.up();
         evt.preventDefault();
-        break
+        break;
         
         case 39:
         game.action.right();
         evt.preventDefault();
-        break
+        break;
 
         case 40:
         game.action.down();
         evt.preventDefault();
-        break
+        break;
 
         case 32:
         Snake.pause();
         evt.preventDefault();
-        break
+        break;
 
         case 27:
         game.reset();
         evt.preventDefault();
-        break
+        break;
     }
 }
 
 return {
-    start: function (fps = 15):
+    start: function (fps = 15){
         window.onload = setup;
         intervalID = setInterval(game.loop, 1000 / fps);
     },
@@ -243,6 +246,9 @@ return {
         tileCount: function(size) {
         tileCount = size;
         gridSize = 400 / tileCount;
+        },
+        fixedTail: function (state) {
+            fixedTail = state;
         }
     },
 
@@ -264,14 +270,14 @@ return {
                 game.action.down();
                 break;    
         }
-    }
+    },
     pause: function () {
         velocity.x = 0;
         velocity.y = 0;
     },
 
     clearTopScore: function () {
-        pointsMax 0;
+        pointsMax = 0;
     },
 
     data: {
@@ -283,8 +289,10 @@ return {
     },
     info: {
         tileCount: tileCount
-    },
+    }
+};
 
+})();
 
 Snake.start(8);
 Snake.setup.Keyboard(true);
