@@ -217,7 +217,7 @@ function keyPush (evt) {
 
 return {
     start: function (fps = 15):
-        Window,onload = setup;
+        window.onload = setup;
         intervalID = setInterval(game.loop, 1000 / fps);
     },
     loop: game.loop,
@@ -246,23 +246,23 @@ return {
 
     action: function(act) {
         switch(act) {
-            case 'left';
+            case 'left':
                 game.action.left();
                 break;
 
-            case 'up';
-                game.action.up;
+            case 'up':
+                game.action.up();
                 break;
 
-            case 'rigth';
-                game.action.'rigth';
+            case 'rigth':
+                game.action.rigth();
                 break;
                 
-            case 'down';
-                game.action. 'down';
+            case 'down':
+                game.action.down();
                 break;    
         }
-    },
+    }
     pause: function () {
         velocity.x = 0;
         velocity.y = 0;
@@ -281,6 +281,10 @@ return {
     },
     info: {
         tileCount: tileCount
-    }
-};
+    },
+
+
+Snake.start(8);
+Snake.setup.Keyboard(true);
+Snake.fixerTail(false);
 
