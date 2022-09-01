@@ -8,8 +8,7 @@
 .game-board {
     width: 80%;
     height: 500px;
-    border-bottom: 15px solid rgb(62, 247, 62);
-    border: 3px solid #333;
+    border-bottom: 15px solid rgb(23, 104, 23);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -66,8 +65,15 @@
 }
 
 .clouds {
-    width: 60px;
+    width: 500px;
     position: absolute;
-    bottom: 600px;
-
+    animation: clouds-animation 8000ms infinite linear;
+}
+@keyframes clouds-animation {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
 }
