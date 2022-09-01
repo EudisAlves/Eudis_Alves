@@ -17,33 +17,33 @@
 .mario {
     position: absolute;
     width: 150px;
-    bottom: 0;
+    bottom: -09px;
 }
 
 .jump {
-    animation: jump 500ms infinite ease-out ;
+    animation: jump 800ms ease-out; 
 }
 
 @keyframes jump {
-    
+
     0% {
-        botton: 0;
+        bottom: -09px;
     }
 
     40% {
-        botton: 180px;
+        bottom: 180px;
     }
 
     50% {
-        botton: 180px;
+        bottom: 180px;
     }
 
     60% {
-        button: 180px;
+        bottom: 180px;
     }
 
     100% {
-        botton: 0;
+        bottom: -09px;
     }
 }
 
