@@ -18,17 +18,18 @@
 .mario {
     position: absolute; 
     width: 150px;
-    bottom: -09px;
+    bottom: 0;
+    
 }
 
 .jump {
     animation: jump 800ms ease-out; 
-}
+} 
 
 @keyframes jump {
 
     0% {
-        bottom: -09px;
+        bottom: 0;
     }
 
     40% {
@@ -44,7 +45,7 @@
     }
 
     100% {
-        bottom: -09px;
+        bottom: 0;
     }
 }
 
