@@ -13,7 +13,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgb(151, 151, 243));
+    background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 .mario {
