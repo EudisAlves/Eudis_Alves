@@ -2,11 +2,55 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: hidden;
 }
 
 .game-board {
     width: 80%;
     height: 500px;
     border: 3px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
 
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: -06%;
+    animation: jump 500ms infinite ;
+}
+
+@keyframes jump {
+    -06% {
+        botton: 0px;
+    }
+    40% {
+        botton: 180px;
+    }
+    50% {
+        botton: 180px;
+    }
+    60% {
+        button: 180px;
+    }
+    100% {
+        botton: -06px
+    }
+}
+
+.pipe {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    animation: pipe-animation 4000ms infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
 }
