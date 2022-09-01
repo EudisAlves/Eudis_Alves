@@ -1,4 +1,4 @@
-const mario + document.querySelector('.mario');
+const mario = document.querySelector('.mario');
 
 const jump = () => {
     mario.classList.add('jump');
