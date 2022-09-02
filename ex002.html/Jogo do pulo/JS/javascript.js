@@ -7,8 +7,8 @@ const jump = () => {
 
         mario.classList.remove('jump');
 
-    }, 800);
+    }, 500);
 }
 
 
-document.addEventListener('keydown', jump);
+document.addEventListener('keydown', jump);                 

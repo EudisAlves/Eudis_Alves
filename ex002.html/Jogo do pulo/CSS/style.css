@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     border: hidden;
-}
+}    
 
 .game-board {
     width: 80%;
@@ -19,8 +19,9 @@
     position: absolute; 
     width: 150px;
     bottom: 0;
-    
-}
+    animation: jump 500ms ease-out;                  
+
+}    
 
 .jump {
     animation: jump 800ms ease-out; 
