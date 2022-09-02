@@ -12,22 +12,21 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87CEEB, #E0F6FF);
+    background: linear-gradient(#0832ec, #edeff1);
 }
 
 .mario {
     position: absolute; 
     width: 150px;
-    bottom: 0;
-    animation: jump 500ms ease-out;                  
-
+    bottom: 0; 
+    animation: jump 900ms ease-out;               
 }    
-
+   
 .jump {
-    animation: jump 800ms ease-out; 
+    animation: jump 900ms ease-out;      
 } 
-
-@keyframes jump {
+      
+@keyframes jump { 
 
     0% {
         bottom: 0;

@@ -1,4 +1,5 @@
 const mario = document.querySelector('.mario');
+const pipe = document.querySelector('.pipe')
 
 const jump = () => {
     mario.classList.add('jump');
@@ -7,8 +8,6 @@ const jump = () => {
 
         mario.classList.remove('jump');
 
-    }, 500);
+    }, 900);
 }
-
-
-document.addEventListener('keydown', jump);                 
+document.addEventListener('keydown', jump);            
