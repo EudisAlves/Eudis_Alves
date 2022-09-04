@@ -23,7 +23,7 @@
 }    
    
 .jump {
-    animation: jump 900ms ease-out;      
+    animation: jump 900ms ease-out;    
 } 
       
 @keyframes jump { 
