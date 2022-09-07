@@ -19,7 +19,7 @@ body::before{
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, #e91e63, #eb2e0d 50%,
-    #220aaf 50%, #ffc107);
+    #cf9a5e 50%, #ffc107);
 }
 
 body::after{
