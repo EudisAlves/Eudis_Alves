@@ -64,15 +64,15 @@ body::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(transparent,rgba(255,255,255,0.2)), 
+    background: radial-gradient(transparent,rgba(216, 19, 19, 0.2)), 
     url(clock.png);
     background-size: cover;
     border-radius: 50%;
     backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(14, 6, 83, 0.5);
     border-bottom: none;
     border-right: none;
-    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.1), 10px 10px 20px rgba(0,0,0,0.2), 0px 40px 50px rgba(0,0,0,0.2);
+    box-shadow: -10px -10px 20px rgba(29, 4, 4, 0.1), 10px 10px 20px rgba(0,0,0,0.2), 0px 40px 50px rgba(0,0,0,0.2);
 }
 
 .clock::before{
@@ -80,7 +80,7 @@ body::before{
     position: absolute;
     width: 15px;
     height: 15px;
-    background: #fff;
+    background: rgb(10, 50, 134);
     border-radius: 50%;
     z-index: 10000;
 }
