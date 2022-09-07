@@ -19,11 +19,11 @@
     position: absolute; 
     width: 150px;
     bottom: 0; 
-    animation: jump 900ms ease-out;               
+                   
 }    
    
 .jump {
-    animation: jump 900ms ease-out;      
+    animation: jump 900ms ease-out;    
 } 
       
 @keyframes jump { 
@@ -32,15 +32,15 @@
         bottom: 0;
     }
 
-    40% {
+     40% {
         bottom: 180px;
-    }
+     }
 
-    50% {
-        bottom: 180px;
-    }
+     50% {
+        botton: 180px;
+     }
 
-    60% {
+     60% {
         bottom: 180px;
     }
 
