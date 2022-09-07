@@ -22,6 +22,4 @@ switch(diaSem) {
     case 6:
         console.log('sabado')
         break
-        
-
 }
