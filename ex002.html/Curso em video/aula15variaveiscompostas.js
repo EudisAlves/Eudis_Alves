@@ -4,3 +4,4 @@ num.sort()
 console.log(num)
 console.log(`ò vetor tem ${num.length} posições`)
 console.log(`o primeiro valor do vetor e ${num[0]}`)
+
