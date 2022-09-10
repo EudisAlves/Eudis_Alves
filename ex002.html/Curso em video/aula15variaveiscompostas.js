@@ -7,5 +7,5 @@ let pos = num.indexOf(8)
 if (pos ==-1) {
     console.log('O valor nao foi encontrado!')
 } else {
-console.log(`o primeiro 9 valor do vetor e ${pos}`)
+console.log(`o primeiro valor do vetor e ${pos}`)
 }
