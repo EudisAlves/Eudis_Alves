@@ -78,3 +78,10 @@
         right: 100%;
     }
 }
+
+.score{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: x-large;
+}
