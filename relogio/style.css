@@ -1,153 +1,69 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center 
-    min-hei 100vh;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c450c0 46%,
+    #ffcc70 100%
+  );
+  height: 100v;
+}
+.clock {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 2px solid black;
 }
 
-body::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #03a9f4, #03a9f4 50%, #cf9a5e 50%, #ffc107); 
+.clock .number {
+  --rotation: 0; /*umas forma de representar uma variavel*/
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--ratation));
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
-body::after{
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(160deg, #1f10ec, #03a9f4 50%, transparent 50%, transparent);
-    animation: animate 5s ease-in-out infinite;
+.clock .number.number-1 {
+  --rotation: 30deg;
 }
-
-@keyframes animate{
-    0%, 100%{
-        transform: translateY(10px);
-    }
-    50%{
-        transform: translateY(10px);
-    }
+.clock .number.number-2 {
+  --rotation: 60deg;
 }
-
-.container{
-    position: relative;
+.clock .number.number-3 {
+  --rotation: 90deg;
 }
-
-.container::before{
-    content: '';
-    position: absolute;
-    bottom: -150px;
-    width: 100%;
-    height: 60px;
-    background: radial-gradient(rgba(0,0,0,0.2),transparent, transparent);
-    border-radius: 50%;
+.clock .number.number-4 {
+  --rotation: 120deg;
 }
-
-.box{
-    position: relative;
-    z-index: 1;
-    width: 400px;
-    height: 400px;
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(250, 250, 250, 0,5);
-    animation: animate 5s ease-in-out infinite;
-    animation-delay: -2.5s;
+.clock .number.number-5 {
+  --rotation: 150deg;
 }
-
-.clock{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(transparent,rgba(216, 19, 19, 0.2)), 
-    url(clock.png);
-    background-size: cover;
-    border-radius: 50%;
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(14, 6, 83, 0.5);
-    border-bottom: none;
-    border-right: none;
-    box-shadow: -10px -10px 20px rgba(29, 4, 4, 0.1), 10px 10px 20px rgba(0,0,0,0.2), 0px 40px 50px rgba(0,0,0,0.2);
+.clock .number.number-6 {
+  --rotation: 180deg;
 }
-
-.clock::before{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background: rgb(10, 50, 134);
-    border-radius: 50%;
-    z-index: 10000;
+.clock .number.number-7 {
+  --rotation: 210deg;
 }
-
-.hour,.min,.sec{
-    position: absolute;
+.clock .number.number-8 {
+  --rotation: 240deg;
 }
-
-.hour, .hr{
-    width: 160px;
-    height: 160px;
+.clock .number.number-9 {
+  --rotation: 270deg;
 }
-
-.min, .mn{
-    width: 190px;
-    height: 190px;
+.clock .number.number-10 {
+  --rotation: 300deg;
 }
-
-.sec, .sc{
-    width: 230px;
-    height: 230px;
-}
-
-.hr, .mn, .sc{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.hr::before{
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 80px;
-    background: rgb(27, 10, 10);
-    z-index: 11;
-    border-radius: 6px;
-}
-
-.mn::before{
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 90px;
-    background: rgb(17, 12, 12);
-    z-index: 12;
-    border-radius: 6px;
-}
-
-.sc::before{
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 150px;
-    background: rgb(12, 9, 9);
-    z-index: 12;
-    border-radius: 6px;
+.clock .number.number-11 {
+  --rotation: 330deg;
 }
