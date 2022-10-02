@@ -72,3 +72,49 @@ body {
 .clock .number.number-11 {
   --rotation: 330deg;
 }
+/* ponteiros */
+
+.clock::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  background-color: #3b2906;
+  transform: translate(-50%, -50%);
+}
+
+.clock .hand {
+  --ratation: 0;
+
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  z-index: 10; /* essa função é para o ponteiro passar por cima do numeros e não passar por baixo */
+  transform: translateX(-50%) rotate(calc(var(--rotation)));
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.clock .hand.seconds {
+  width: 3px;
+  height: 40%;
+  background-color: red;
+}
+
+.clock .hand.minutes {
+  width: 7px;
+  height: 35%;
+  background-color: black;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 25%;
+  background-color: black;
+}
