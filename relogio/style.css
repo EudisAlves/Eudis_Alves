@@ -13,6 +13,9 @@ body {
     #ffcc70 100%
   );
   height: 100v;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .clock {
   width: 500px;
@@ -20,6 +23,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   border: 2px solid black;
+  position: relative;
 }
 
 .clock .number {
@@ -32,10 +36,11 @@ body {
   transform: rotate(var(--ratation));
   font-size: 1.8rem;
   font-weight: 500;
+  padding: 15px;
 }
 
 .clock .number.number-1 {
-  --rotation: 30deg;
+  --rotation: 30deg; /* apartir de agora vamos pular de 30 e 30 graus */
 }
 .clock .number.number-2 {
   --rotation: 60deg;
