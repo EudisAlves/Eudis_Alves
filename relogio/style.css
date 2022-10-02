@@ -10,7 +10,7 @@ body {
     43deg,
     #4158d0 0%,
     #c450c0 46%,
-    #ffcc70 100%
+    #f87b49 100%
   );
   height: 100vh;
   display: flex;
@@ -75,7 +75,7 @@ body {
 /* ponteiros */
 
 .clock::after {
-  /* a função after é para adicionar um conteúdo antes do contaener */
+  /* a função after é para adicionar um conteúdo um conteúdo antes do contaener */
   content: "";
   position: absolute;
   width: 10px;
@@ -114,7 +114,7 @@ body {
   background-color: black;
 }
 
-.clock .hand.hour {
+.clock .hand.hours {
   width: 10px;
   height: 25%;
   background-color: black;
