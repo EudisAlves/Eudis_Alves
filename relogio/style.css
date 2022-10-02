@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  transform: rotate(var(--ratation));
+  transform: rotate(var(--rotation));
   font-size: 1.8rem;
   font-weight: 500;
   padding: 15px;
