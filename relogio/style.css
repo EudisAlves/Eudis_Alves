@@ -12,7 +12,7 @@ body {
     #c450c0 46%,
     #ffcc70 100%
   );
-  height: 100v;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +75,7 @@ body {
 /* ponteiros */
 
 .clock::after {
+  /* a função after é para adicionar um conteúdo antes do contaener */
   content: "";
   position: absolute;
   width: 10px;
@@ -83,7 +84,7 @@ body {
   top: 50%;
   left: 50%;
   z-index: 11;
-  background-color: #3b2906;
+  background-color: black;
   transform: translate(-50%, -50%);
 }
 
@@ -95,7 +96,7 @@ body {
   left: 50%;
   background-color: black;
   z-index: 10; /* essa função é para o ponteiro passar por cima do numeros e não passar por baixo */
-  transform: translateX(-50%) rotate(calc(var(--rotation)));
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
   transform-origin: bottom;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
