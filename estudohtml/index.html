@@ -19,24 +19,69 @@
     <a href="https://google.com" target="_blank">Google</a>
     <table>
       <!--Criando uma tabela-->
-      <tr>
-        Nome
-      </tr>
-      <th>Email</th>
-      <th>Idade</th>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>idade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- corpo da tabela-->
+        <tr>
+          <td>Eudis Alves</td>
+          <td>eudis@gmail.com</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>Bianca Vieira</td>
+          <td>bianca@gmail.com</td>
+          <td>23</td>
+        </tr>
+      </tbody>
     </table>
-    <tbody>
-      <!-- corpo da tabela-->
-      <tr>
-        <td>Eudis Alves</td>
-        <td>eudis@gmail.com</td>
-        <td>40</td>
-      </tr>
-      <tr>
-        <td>Bianca Vieira</td>
-        <td>bianca@gmail.com</td>
-        <td>23</td>
-      </tr>
-    </tbody>
+    <!--Formulários-->
+    <hr />
+    <form action="form.php" method="POST">
+      <div>
+        <label>Primeiro Nome</label>
+        <input type="text" placeholder="Entre com seu primeiro nome" />
+      </div>
+
+      <div>
+        <label>Segundo Nome</label>
+        <input type="text" placeholder="Entre com seu segundo nome" />
+      </div>
+      <hr />
+      <div>
+        <label>Email</label>
+        <input type="email" />
+      </div>
+
+      <div>
+        <label>Gênero</label>
+        <select>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Data de nascimento</label>
+        <input type="date" />
+      </div>
+
+      <div>
+        <label>Senha</label>
+        <input type="password" />
+      </div>
+
+      <div>
+        <label>Mensagem,</label>
+        <textarea name="mensagem"></textarea>
+      </div>
+
+      <input type="submit" />
+    </form>
   </body>
 </html>
