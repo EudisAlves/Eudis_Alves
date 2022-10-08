@@ -1,5 +1,6 @@
 body {
   background-color: blanchedalmond;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .segundo-h1 {
@@ -10,4 +11,19 @@ body {
 #terceiro-h1 {
   /* id serve para stylizar apenas um elemento*/
   color: blue;
+}
+
+.container {
+  background-color: #333;
+  color: #eee;
+  width: 960px;
+  margin: auto;
+  padding-top: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  /*se todos os padding ticar com a mesma medida é so uma padding a medida desejada*/
+  padding: 20px;
+  border: 3px solid rgb(74, 250, 51);
+  /*border: 6px dotted yellow;*/
 }
