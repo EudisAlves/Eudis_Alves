@@ -1,0 +1,13 @@
+body {
+  background-color: blanchedalmond;
+}
+
+.segundo-h1 {
+  /* classe serve para stylizar um grupo de elementos*/
+  color: aqua;
+}
+
+#terceiro-h1 {
+  /* id serve para stylizar apenas um elemento*/
+  color: blue;
+}
