@@ -38,9 +38,57 @@
     <aside class="main-aside">
       <h2>Redes Sociais</h2>
       <ul>
-        <li><a href="twitter.com">Twitter</a></li>
-        <li><a href="instagram.com">Instagram</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://instagram.com">Instagram</a></li>
       </ul>
     </aside>
+
+    <hr />
+
+    <form action="form.php" method="POST" class="main-form">
+      <div class="form-grup">
+        <label>Primeiro Nome</label>
+        <input type="text" placeholder="Entre com seu primeiro nome" />
+      </div>
+
+      <div class="form-grup">
+        <label>Segundo Nome</label>
+        <input type="text" placeholder="Entre com seu segundo nome" />
+      </div>
+
+      <div class="form-grup">
+        <label>Email</label>
+        <input type="email" />
+      </div>
+
+      <div class="form-grup">
+        <label>Gênero</label>
+        <select>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+        </select>
+      </div>
+
+      <div class="form-grup">
+        <label>Data de nascimento</label>
+        <input type="date" />
+      </div>
+
+      <div class="form-grup">
+        <label>Senha</label>
+        <input type="password" />
+      </div>
+
+      <div class="form-grup">
+        <label>Mensagem,</label>
+        <textarea name="mensagem"></textarea>
+      </div>
+
+      <input type="submit" />
+      <!--imagens-->
+      <img src="./img/sample.jpg" alt="imagens de exemplo" />
+    </form>
+
+    <button class="button">Submit</button>
   </body>
 </html>

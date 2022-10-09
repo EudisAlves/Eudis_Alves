@@ -1,5 +1,5 @@
 body {
-  background-color: blanchedalmond;
+  background-color: rgb(230, 244, 248);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -41,4 +41,32 @@ body {
 .main-aside ul a {
   text-decoration: none;
   color: black;
+}
+
+.main-aside ul a:hover {
+  /*a função hover sinaliza que o mause está passando por cima do link*/
+  color: red;
+}
+
+.main-aside ul a:visited {
+  color: blue;
+}
+/* formularios*/
+
+.main-form {
+  padding-left: 20px;
+}
+
+.main-form .form-grup {
+  padding-bottom: 10px;
+}
+
+.main-form .form-grup label {
+  display: block;
+}
+
+.button {
+  padding: 15px;
+  background-color: #333;
+  color: #eee;
 }
