@@ -70,3 +70,12 @@ body {
   background-color: #333;
   color: #eee;
 }
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  padding: 55px;
+  background-color: blue;
+  border: 2px solid rgb(89, 243, 89);
+  color: aqua;
+}
