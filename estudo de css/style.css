@@ -71,11 +71,14 @@ body {
   color: #eee;
 }
 
-.sticky {
+.subtext {
   position: sticky;
-  top: 0px;
-  padding: 55px;
+  text-align: center;
+  top: 100px;
+  padding: 5px;
   background-color: blue;
   border: 2px solid rgb(89, 243, 89);
   color: aqua;
 }
+
+/* posição */
