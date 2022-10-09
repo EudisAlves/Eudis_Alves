@@ -18,14 +18,14 @@ body {
   color: #eee;
   width: 960px;
   margin: auto;
-  padding-top: 60px;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-bottom: 60px;
+  padding-top: auto;
+  padding-left: auto;
+  padding-right: auto;
+  padding-bottom: auto;
   /*se todos os padding ticar com a mesma medida é so uma padding a medida desejada*/
   padding: 20px;
   border: 3px solid rgb(74, 250, 51);
-  /*border: 6px dotted yellow;*/
+  /*border: autodotted yellow;*/
 }
 
 .main-aside h2 {
