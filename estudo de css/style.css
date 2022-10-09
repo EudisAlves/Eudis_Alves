@@ -27,3 +27,18 @@ body {
   border: 3px solid rgb(74, 250, 51);
   /*border: 6px dotted yellow;*/
 }
+
+.main-aside h2 {
+  text-align: center;
+}
+
+.main-aside ul {
+  list-style: none; /*serve para tirar a bolinha da teg li*/
+  text-align: center;
+  padding: 0%;
+}
+
+.main-aside ul a {
+  text-decoration: none;
+  color: black;
+}
