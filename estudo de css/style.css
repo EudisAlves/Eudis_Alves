@@ -82,3 +82,19 @@ body {
 }
 
 /* posição */
+
+.relative {
+  position: relative;
+  border: 3px solid #333;
+  bottom: 0;
+}
+
+.relavite .absolute {
+  position: absolute;
+  bottom: 0;
+}
+
+.relative .absolute h1 {
+  /* essa lina de código foi usada para tirar a margem padrão do h1*/
+  margin: 0;
+}
