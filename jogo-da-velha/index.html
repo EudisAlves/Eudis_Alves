@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="board" x>
-      <div class="cell x" data-cell></div>
-      <div class="cell circle" data-cell></div>
+    <div class="board" data-board>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
@@ -21,8 +21,10 @@
     </div>
 
     <div class="winning-message" data-winning-message>
-      <p>X venceu!</p>
-      <button>Reiniciar!</button>
+      <p class="winning-message-text" data-winning-message-text>X venceu!</p>
+      <button class="winning-message-botton" data-restart-button>
+        Reiniciar!
+      </button>
     </div>
 
     <script src="./javascript.js"></script>

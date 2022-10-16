@@ -26,6 +26,20 @@ body {
   grid-template-columns: repeat(3, auto);
 }
 
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x
+  .cell:not(.x):not(.circle):hover::after
+  .board.circle
+  .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
+  background: rgba(
+    247,
+    247,
+    234,
+    0.3
+  ) !important; /*função important para dos os elementos do mesmo nome */
+}
+
 .cell {
   width: 100px;
   height: 100px;
@@ -67,37 +81,72 @@ body {
 /* X */
 .cell.x::before,
 .cell.x::after,
-.board.x .cell:hover::before,
-.board.x .cell:hover::after {
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
   content: "";
   height: calc(100px * 0.15);
   width: calc(100px * 0.9);
-  background: black;
+  background: rgb(248, 245, 245);
   position: absolute;
 }
 
 .cell.x::before,
-.board.x .cell:hover::before {
+.board.x .cell:not(.x):not(.circle):hover:before {
   transform: rotate(45deg);
 }
 
 .cell.x::after,
-.board.x .cell.x::after {
+.board.x .cell:not(.x):not(.circle):hover::after {
   transform: rotate(-45deg);
 }
 
 /* circle */
 
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after,
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
   content: "";
   height: calc(100px * 0.9);
   width: calc(100px * 0.9);
-  background: black;
+  background: rgb(250, 249, 249);
   position: absolute;
   border-radius: 50%;
 }
 
 .winning-message {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+}
+
+.winning-message-botton {
+  font-size: 2.5rem;
+  background-color: rgba(114, 228, 228);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 16px;
+  color: aliceblue;
+}
+
+.winning-message-botton:hover {
+  color: rgba(114, 228, 228);
+  background-color: aliceblue;
+}
+
+.winning-message-text {
+  color: white;
+  font-size: 5rem;
+}
+
+.show-winning-message {
+  display: flex;
 }
