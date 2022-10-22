@@ -2,7 +2,7 @@ window.onload = function () {
   var stage = document.getElementById("stage");
   var ctx = stage.getContext("2d");
   document.addEventListener("keydown", keyPush); // toda vez que uma tecla for precionada ele adiciona um evento
-  setTimeout(game, 60);
+  setTimeout(game, 120);
 
   const vel = 1; // velocidade + 1 casa
   var vx = (vy = 0); // velocidade de x e y
@@ -65,20 +65,20 @@ window.onload = function () {
 function keyPush(event) {
   switch (event.keyCode) {
     case 37: // left
-      vx = -vel;
+      vx = -vel
       vy = 0;
       break;
     case 38: // up
       vx = 0;
-      vy = -vel;
+      vy = -vel
       break;
-    case 39: // height
-      vx = vel;
+    case 39: // right
+      vx = vel
       vy = 0;
       break;
     case 40: // down
       vx = 0;
-      vy = vel;
+      vy = vel
       break;
     default:
       break;
