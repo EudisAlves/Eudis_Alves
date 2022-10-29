@@ -11,6 +11,8 @@ function start() {
   //Principais variáveis do jogo
 
   var jogo = {};
+  var velocidade = 5;
+  var posicaoY = parseInt(Math.random() * 334);
   var TECLA = {
     W: 87,
     S: 83,
@@ -33,6 +35,7 @@ function start() {
   jogo.timer = setInterval(loop, 30); /* o loopse repetirar a cara 30ms*/
 
   function loop() {
+    moveinimigo1();
     movefundo();
     movejogador();
   } // Fim da função loop()
@@ -48,15 +51,29 @@ function start() {
     if (jogo.pressionou[TECLA.W]) {
       var topo = parseInt($("#jogador").css("top"));
       $("#jogador").css("top", topo - 10);
-      if (topo <= 0) { /* para limitar o elemento na tela*/
+      if (topo <= 0) {
+        /* para limitar o elemento na tela*/
         $("#jogador").css("top", topo + 10);
       }
     }
 
+    function moveinimigo1() { /* para fazer o inimigo passar pela tela de forma aleatória*/
+      posicaoX = parseInt($("#inimigo1").css("left")); /* sempre da direita para esquerda*/
+      $("#inimigo1").css("left", posicaoX - velocidade);
+      $("#inimigo1").css("top", posicaoY);
+
+      if (posicaoX <= 0) {
+        posicaoY = parseInt(Math.random() * 334);
+        $("#inimigo1").css("left", 694);
+        $("#inimigo1").css("top", posicaoY);
+      }
+    } //Fim da função moveinimigo1()
+
     if (jogo.pressionou[TECLA.S]) {
       var topo = parseInt($("#jogador").css("top"));
       $("#jogador").css("top", topo + 10);
-      if (topo >= 434) { /* para nao deixar o elemento passar do botton*/
+      if (topo >= 434) {
+        /* para nao deixar o elemento passar do botton*/
         $("#jogador").css("top", topo - 10);
       }
     }
