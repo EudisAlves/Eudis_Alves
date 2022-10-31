@@ -41,7 +41,7 @@ function start() {
     moveamigo();
     movefundo();
     movejogador();
-    disparo();
+    colisao();
   } // Fim da função loop()
 
   //Função que movimenta o fundo do jogo
@@ -74,6 +74,7 @@ function start() {
       disparo(); //Chama função Disparo
     }
   } // fim da função movejogador()
+
   function moveinimigo1() {
     /* para fazer o inimigo passar pela tela de forma aleatória*/
     posicaoX = parseInt(
@@ -99,16 +100,12 @@ function start() {
   } // Fim da função moveinimigo2()
 
   function moveamigo() {
-	
     posicaoX = parseInt($("#amigo").css("left"));
-    $("#amigo").css("left",posicaoX+1);
-          
-      if (posicaoX>906) {
-        
-      $("#amigo").css("left",0);
-            
-      }
-  
+    $("#amigo").css("left", posicaoX + 1);
+
+    if (posicaoX > 906) {
+      $("#amigo").css("left", 0);
+    }
   } // fim da função moveamigo()
 
   function disparo() {
@@ -138,6 +135,23 @@ function start() {
       }
     } // Fecha executaDisparo()
   } // Fecha disparo()
+
+  function colisao() {
+    var colisao1 = $("#jogador").collision($("#inimigo1"));
+    if (colisao1.length > 0) {
+      inimigo1X = parseInt($("#inimigo1").css("left"));
+      inimigo1Y = parseInt($("#inimigo1").css("top"));
+      explosao1(inimigo1X, inimigo1Y);
+
+      posicaoY = parseInt(Math.random() * 334);
+      $("#inimigo1").css("left", 694);
+      $("#inimigo1").css("top", posicaoY);
+    }
+
+    // jogador com o inimigo1
+
+    console.log(colisao1);
+  } //Fim da função colisao()
 } // Fim da função start
 
 //parei na aula 12
