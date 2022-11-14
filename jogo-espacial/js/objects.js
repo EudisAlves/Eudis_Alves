@@ -1,19 +1,26 @@
-(function(){
-    // colocando o canvas ****************************************************************
-    let cnv = document.querySelector('canvas');
-    //colocando o contexto de renderizaç~ao 2d *******************************************
-    let ctx = cnv.getContext('2d');
-    // recursos do jogo  *****************************************************************
+var Sprite = function (sourceX, sourceY, width, height, x, y) {
+  this.sourceX = sourceX;
+  this.sourceY = sourceY;
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;
+  this.vx = 0;
+  this.vy = 0;
+};
 
-    //arraqys ****************************************************************************
-    let sprites = [];
-    let assetsToLoad = [];
-    //sprites ****************************************************************************
+Sprite.prototype.centerX = function () {
+  return this.x + this.width / 2;
+};
 
-    //cenarios ***************************************************************************
-    let background = new Sprite(0,56,400,500,0,0);
-	sprites.push(background);
-    //nave *******************************************************************************
-    let defender = new Sprite(0,0,30,50,185,450);
-	sprites.push(defender);
-}());
+Sprite.prototype.centerY = function () {
+  return this.y + this.height / 2;
+};
+
+Sprite.prototype.halfWidth = function () {
+  return this.width / 2;
+};
+
+Sprite.prototype.halfHeight = function () {
+  return this.height / 2;
+};
