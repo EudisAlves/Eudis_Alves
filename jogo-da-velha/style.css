@@ -37,6 +37,11 @@ body {
   position: relative;
 }
 
+.cell.x,
+.cell.circle {
+  cursor: not-allowed; /* impedir que a celula seja re-utilizada no partida*/
+}
+
 .cell:nth-child(1),
 .cell:nth-child(2),
 .cell:nth-child(3) {
