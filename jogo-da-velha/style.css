@@ -78,6 +78,24 @@ body {
   transform: rotate(-45deg);
 }
 
+/*circle*/
+.cell.circle::before,
+.cell.circle::after {
+  content: "";
+  height: calc(100px * 0.9);
+  width: calc(100px * 0.9);
+  background: blue;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cell.circle::before {
+  transform: rotate(45deg);
+}
+
+.cell.circle::after{
+  transform: rotate(-45deg);
+}
 .winning-messege {
   display: none;
 }
