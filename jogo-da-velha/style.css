@@ -60,7 +60,7 @@ body {
 .cell:nth-child(9) {
   border-right: none;
 }
-
+/* x */
 .cell.x::before,
 .cell.x::after {
   content: "";
@@ -84,7 +84,7 @@ body {
   content: "";
   height: calc(100px * 0.9);
   width: calc(100px * 0.9);
-  background: blue;
+  background: rgb(105, 105, 248);
   position: absolute;
   border-radius: 50%;
 }
