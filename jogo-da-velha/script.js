@@ -1,22 +1,14 @@
-const cellElements = document.querySelectorAll("[date-cell]");
+const cellElements = document.querySelectorAll("[data-cell]");
 const board = document.querySelector("[data-board]");
 
-let isCircleTurn;
+let isCircleTurn = false;
 
-const startGame = () => {
-    for (const cell of cellElements) {
-        cell.addeEventListener("click", handleClick, { once: true });
-    }
-    isCircleTurn = false;
-
-    board.classList.add("x");
-}
 const placeMark = (cell, classToAdd) => {
     cell.classList.add(classToAdd);
 };
 
 const swapTurn = () => {
-    isCircleTurn = !isCircleTurn
+    isCircleTurn = !isCircleTurn;
 
     board.classList.remove("circle");
     board.classList.remove("x");
@@ -28,17 +20,21 @@ const swapTurn = () => {
     }
 };
 
-const handleClick = () => {
+const handleClick = (e) => {
     //colocar a marca (x ou circulo)
     const cell = e.target;
     const classToAdd = isCircleTurn ? "circle" : "x";
     
-    cell.classList.add(classToAdd);
+    placeMark(cell, classToAdd);
     // verificação por vitória
+
     // verificação por empate
+
     // mudar simbolo
+
     swapTurn();
 };
 
-startGame();
-
+for (const cell of cellElements) {
+    cell.addeEventListener("click", handleClick, { once: true });
+}
