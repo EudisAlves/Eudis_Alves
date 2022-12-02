@@ -37,6 +37,7 @@ const handleClick = () => {
     // verificação por vitória
     // verificação por empate
     // mudar simbolo
+    swapTurn();
 };
 
 startGame();
