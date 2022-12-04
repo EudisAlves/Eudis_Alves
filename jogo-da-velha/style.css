@@ -142,3 +142,7 @@ body {
   color: white;
   font-size: 5rem;
 }
+
+.show-winning-message {
+  display: flex;
+}
