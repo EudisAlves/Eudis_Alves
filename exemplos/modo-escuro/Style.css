@@ -1,0 +1,269 @@
+/* config basica do css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+textarea,
+button,
+a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #0D0D0D;
+    color: white;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+/* config dos modos  do css */
+
+#modoDark {
+    display: none;
+    color: black;
+}
+
+.alura {
+    width: 20rem;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    padding: 3rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header button {
+    font-size: 2.6rem;
+    background: none;
+    color: white;
+    border: none;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+
+/* css botoes*/
+
+#jogo,
+#filme,
+#livro,
+#voltar {
+    margin: 0 auto;
+    width: 25rem;
+    height: 5rem;
+    background: none;
+    border: none;
+    --color: #00f8cc;
+    color: var(--color);
+    font-size: 3rem;
+    transition: all .2s ease-in;
+}
+
+#jogo:hover,
+#filme:hover,
+#livro:hover,
+#voltar:hover {
+    background: var(--color);
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 150px var(--color);
+    color: #fff;
+}
+
+#filmes,
+#jogos {
+    color: white;
+    width: 100%;
+    display: none;
+}
+
+
+/* css apresentação filme/jogos/livros */
+
+#filmes fieldset,
+#jogos fieldset {
+    margin: 2rem 0;
+}
+
+#filmes legend,
+#jogos legend {
+    font-family: Archivo;
+    font-size: 3rem;
+}
+
+#filmes fieldset button,
+#jogos fieldset button {
+    height: 20rem;
+    border: none;
+    width: 15rem;
+    margin: 1rem 3rem;
+    background: none;
+    cursor: pointer;
+}
+
+#filmes fieldset button img,
+#jogos fieldset button img {
+    border: 1px solid red;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0 30px rgba(141, 14, 14, 0.8);
+}
+
+#filmes fieldset button h1 {
+    color: white;
+}
+
+#jogos fieldset button h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* css dos banner filmes  */
+
+#tePeguei,
+#compadecida,
+#estagiario,
+#aladdin,
+#potter,
+#wars,
+#vingadores,
+#wanda {
+    display: none;
+}
+
+#tePeguei h1,
+#compadecida h1,
+#estagiario h1,
+#aladdin h1,
+#potter h1,
+#wars h1,
+#wanda h1,
+#vingadores h1 {
+    text-align: center;
+    font-size: 3.6rem;
+    margin: 2rem 0 0 0;
+}
+
+#tePeguei button,
+#compadecida button,
+#estagiario button,
+#aladdin button,
+#potter button,
+#wars button,
+#vingadores button,
+#wanda button {
+    width: 3rem;
+    height: 3rem;
+    font: 700 2.6rem Archivo;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* css dos rodapé */
+
+footer {
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+#jogos fieldset button,
+#filmes fieldset button {
+    width: 20rem;
+}
+
+#jogos .img {
+    width: 19.5rem;
+    height: 26rem;
+}
+
+footer p {
+    font: 700 2.6rem Archivo;
+}
+
+footer p img {
+    width: 5rem;
+}
+
+
+/* css dos medias query */
+
+@media (min-width: 0) {
+    #filmes fieldset,
+    #jogos fieldset {
+        height: 125rem;
+    }
+    #filme {
+        top: 20%;
+        left: 15%;
+        position: absolute;
+    }
+    #jogo {
+      position: absolute;
+        top: 40%;
+        left: 15%;
+        
+    }
+    #livro {
+        top: 60%;
+        left: 15%;
+        position: absolute;
+    }
+}
+
+@media (min-width: 520px) {
+    #filmes fieldset,
+    #jogos fieldset {
+        height: 70rem;
+    }
+}
+
+@media (min-width: 950px) {
+    #filmes fieldset,
+    #jogos fieldset {
+        height: 36rem;
+    }
+    #filme {
+        top: 50%;
+        left: 20%;
+        position: absolute;
+    }
+    #jogo {
+        top: 50%;
+        left: 40%;
+        position: absolute;
+    }
+    #livro {
+        top: 50%;
+        left: 60%;
+      
+        position: absolute;
+    }
+}

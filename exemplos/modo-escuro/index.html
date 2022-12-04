@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <title>Games | filmes</title>
+</head>
+
+<body>
+  <div id="container">
+
+    <!-- header da pagina  -->
+
+    <header id="header">
+      <img src="https://fontmeme.com/temporary/94d2e3386d2b0aeab186db7b5fcb0010.png" alt="Logo TomiFlix">
+      <button id="modo" onclick="Luz()">Modo escuro: <strong>ON</strong></button>
+      <button id="modoDark" onclick="Dark()">Modo escuro: <strong>OFF</strong></button>
+    </header>
+
+    <div id="content">
+      <Button id="filme" onclick="Aparecer()">Veja os Filmes </Button>
+
+      <!-- apresentação dos Filmes  -->
+      <div id="filmes">
+        <Button id="voltar" onclick="home()">TomiFlex </Button>
+
+        <fieldset>
+          <legend id="legend">Comédia</legend>
+          <button onclick="Aladdin()">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Alladin">
+            <h1>Aladdin</h1>
+          </button>
+          <button onclick="Compadecida()">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTNlZTkxOGUtMmI0MC00MzVjLWE4NzQtNjRjMzNjMzRmMWUyXkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme o alto da conpadecida">
+            <h1> O alto </h1>
+          </button>
+          <button onclick="Estagiario()">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Os estagiarios">
+            <h1> Estagiários </h1>
+          </button>
+          <button onclick="tePeguei()">
+            <img src="https://m.media-amazon.com/images/M/MV5BNzk4NDM3NjkwNF5BMl5BanBnXkFtZTgwNTk5MzkzNTM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Te peguei">
+            <h1> Te peguei </h1>
+          </button>
+
+        </fieldset>
+
+        <fieldset>
+          <legend id="legends">Populares</legend>
+          <button onclick="Potter()">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Harry potter">
+            <h1> potter</h1>
+          </button>
+          <button onclick="Wars()">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme o Star Wars">
+            <h1> star wars </h1>
+          </button>
+          <button onclick="Vingadores()">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Os Vingadores">
+            <h1> Vingadores </h1>
+          </button>
+          <button onclick="Wanda()">
+            <img src="https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Filme Te peguei">
+            <h1> Wanda </h1>
+          </button>
+
+        </fieldset>
+
+      </div>
+
+      <!-- Inicio Filmes trailers -->
+      <div id="tePeguei">
+        <h1>Te Peguei</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi2633022233/1434659607842-pgv4ql-1529083030767.mp4?Expires=1616773043&Signature=HABFI-rY~waY4v-CxTaSEJvP-v7parZDNTO1t9eAPIOpJuZkjjmA74SOh51B1t~AkXe7HdI3oQR9ByMq7INTYyaf9BL-9v~TspOYJbb9epMfkjGQ3bmEMrAipepYqcQyfwVZ3~NSLdt5zYNWF4T-9CPyhmu3HzsOE7bFuqK9ZNcuW6v6dLVEgFljrM0fSU2VZqxqFZtcYWItmEpdW3EVfrCccKKVFATzAj8~-egSAUltnvEnnyDtKdhjGAls9mvjyZImKP-mbrtVU9-CZs9UK6lHHTeFB4HsMGBa9Vp76RwTFaboOtRf05A6TExwnliHenviiWWVCUMndR9QSL946g__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+      <div id="compadecida">
+        <h1>O AUTO DA COMPADECIDA</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="//s3.vid.web.acsta.net/BR/nmedia/55/18/87/87/75/19372422_sd_013.mp4" width="100%" height="100%"></video>
+      </div>
+      <div id="estagiario">
+        <h1>Os Estagiários</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi1707648537/1434659607842-pgv4ql-1616203234368.mp4?Expires=1616780658&Signature=UjJTHhBSMKgpV-BHC90uuIXzQsP6bH4-knbFSoMH4IvqbMfOd9z8gIIE~P8YNsL5QA6IusrJ~15JYkDJVNHLxCaZeig4M1Gym~Grv77wg3PFuyO4dGHkgb7iuGTzmd5kMhQ0iOcqCJIvKOMdhrPE1SZzJLrmzJh06wKfMDhCNdH4~IgGgNzHnj2-FmCFrgFLpLF5HIQrNnFLoemqUEkttWKZcqQ0Q5oyBcXq1LjceqsP-sNfgIlGvfK3OIvowQ7ThBcYsI21LuvbeSBG3pj9~Ofz9yG4rFHRdz7Ke6Fir6YexTz~4soWIL~XrfYdnal090J28zsBfBgdN4-G9FGS7w__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+      <div id="aladdin">
+        <h1>Alladin</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi3875453977/1434659607842-pgv4ql-1557175860854.mp4?Expires=1616781025&Signature=dW5x6l-Y5sLnv~46f-pUJWNRC56o~dEOpM4wcgMWXfXEgJNciodqfAI4PQO5M3jxJX43dSpOH6Aim2iMOBWVqHVzgmggZ3lHwqIfNpcs1tsaKl-8bCAsdN~q4x8kdk0fRPZGmXoOVhae2LR4ueY2h2bS9v0OGnosjRQgtXl4yB0UUWRORgKOzkHIQ48PcWgCgEXrpmjEgxtFbtTXWHiOo8-sWy5WpuSMK64DSwvpg-zlQ6VVJji4lztDzAeSY22ENQS-qsDCAwcwlPiHQoRAqhXf80jmTDV-6zqoE30SSvdxjX1LZtwKqnFG0sYsKV9kvc58XHcKlLOYO7CvY9st4Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+
+      <div id="potter">
+        <h1>harry potter e o prisioneiro de azkaban</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi2007761177/1434659607842-pgv4ql-1563895490493.mp4?Expires=1616781997&Signature=e31JBHX5rnRKAHtCh7zlDm95HGyxZFK8bWmB1RjCiqZ70H-Kdc9~bneMGtcTMIXq0ZdfpluTJHrK45LyYKybM3WDFiMmMrpH7ZSJt5tlCHtk7fzEhjnvtlvmt9aF71vaHKuxfTKpsb1MypkoG0AGaWt7hk1EoFainnGd8QXk~1NlBrxUG~a8-Pz20Zmapq6uVDsRJ05qVOW4mipMyuLHkoztUDW-5Lu4OrmhcKYxs3QBMidpIFbeUhiUu7t1kLRrTzGDfuP4ZFVD~lyNGssQP8GuZZtQ7UmBtwjmyS8LHxM1HwbBhkgPon4i8zDMtMhi233pS8~xleETZuXIWUQ-Qg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+      <div id="wars">
+        <h1>Star Wars: O Despertar da Força</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi2762323481/1434659607842-pgv4ql-1473477553262.mp4?Expires=1616797448&Signature=SlxQniRPANKmXIl8q0ErIpuQtVorL0BCrz-6W4yHI~-KyiXWsR~0wXNNU2hfJVjZoPAuH5Lphe5BNbtGeH5afBoHQsoI2Ikrm3V79L40AYiLQ5yt48VztBjB1Ano6gAmT4nZZov3vDceGOv7NM2oXk9jQXCp4KvQ~MVt0hBtLUoX22vrQRit7i55oh11XkCiDuoZtFZkIr7BKkq1~Gjar00-u8XrCBN-YdVjjaFxY5U~JAWO0~pnna7Ut3ZE9fsRdVoxCde4PUZ-3DMFPl8W3Hhcx1o2en7eWQuLnqbt3WMFO1hgj4tpQZ7sAynrh9tIgOqX6ZQOjcSxt~o0M6d~Vg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+
+      <div id="vingadores">
+        <h1>Vinadores guerra infinita</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi528070681/1434659607842-pgv4ql-1523121356094.mp4?Expires=1616783059&Signature=X8F-ednbXDCxcONsLsU371f~e3lxpeTkEiGY9fi2oubwrWuZpCCvZvgxaCQSYsnDovqKjq1pfsS0fIlVTSsxAgYHhlqOLYWjIU-rNXC33kbr2tMGOHy4B8sl8HKUjoV-sQDy-fwgDgb27~Cv2n3wAuP4xZAAsLNz3FqWmj-cmLZeHF1lRATg3bNI8kOsDIFpWfU4mZQ3qiv~3W~IMdarM4GlzUriQRgolJE2J7pnZWVe2j4p6CZxTjMMknohJblSqU9YqMraywG5CMDMm2sf0kAyF4XJnm70hC2xsC-W2O1kViATEExpzJruxcnOhSg8uAwo39Zp6W6igrpDwoacwg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+      <div id="wanda">
+        <h1>WandaVision</h1>
+        <button onclick="voltar()">X</button>
+        <video controls src="https://imdb-video.media-imdb.com/vi579518745/1434659607842-pgv4ql-1602248541124.mp4?Expires=1616783353&Signature=BZoezUrnYPaw1722Efg5F~fE5-z-IZ81sQpLcMJzzEGd9zjUhLHeMvxfzkmrNW6cH9g48fbx5To~T69RmFGAWcq4jIDtif~yaYL018cxXFHKEcKm0ycV4rCIgxCXpWRIdTsWRVqGBkOIUgj25Pkfx9SQBr09zSuunKYqBp078jdSpH~TZLPfMzmxjzKqDLXZW~jxeay79thucfGViDRhmoEnLHkaTSlqgRdBOtS~H~gosMayrEbXoMT~KVpRRpZUh6SpfPOaaxxknEGKKnI6FMcR1TfI6iAMac7WmEgTjGi7UcXTwBL1ztNH3Zac1q5vv~nlhHbRC5mGA0UebwQZRQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" width="100%" height="100%"></video>
+      </div>
+
+      <!--Final  Filmes trailers -->
+
+      <Button onclick="AparecerJogo()" id="jogo" style="--color:#85f829">Veja os Jogos </Button>
+
+      <!-- apresentação dos Jogos  -->
+
+      <div id="jogos">
+
+        <Button id="voltar" onclick="home()">TomiFlex </Button>
+
+        <fieldset>
+          <legend id="legen">De época </legend>
+          <button>
+            <img class="img" src="https://i.ebayimg.com/images/g/2dsAAOSwfA5e8~DK/s-l400.jpg" alt="Jogo GTA ">
+            <h1>GTA San Andreas</h1>
+          </button>
+          <button>
+            <img class="img" src="https://th.bing.com/th/id/Rddcb75aeb5aaefde1f1f93a89509437d?rik=LpVOz08I7%2bNrJg&riu=http%3a%2f%2f1.bp.blogspot.com%2f_RR1dRZ0bmGs%2fTTkIIIuVGtI%2fAAAAAAAACCk%2fruGMtkdi558%2fs1600%2fbully%252Bps2.jpg&ehk=CtrtLCw72b3fBp8GBb21AHG%2fmfLdDobx9Mo0QsySPV0%3d&risl=&pid=ImgRaw" alt="Jogo Bulling">
+            <h1> Bulling </h1>
+          </button>
+          <button>
+            <img class="img" src="https://th.bing.com/th/id/Rf356a7c8f59a09707868622096b9eb68?rik=sPC1eH9wElavpg&riu=http%3a%2f%2fecx.images-amazon.com%2fimages%2fI%2f51DFE4MVJEL.jpg&ehk=leKnjqi7SZs6q20IwJXXRLIah%2f3JMdlwAYuhSm06hdI%3d&risl=&pid=ImgRaw" alt="Jogo Need of Speed Underground">
+            <h1> Underground </h1>
+          </button>
+          <button>
+            <img class="img" src="https://th.bing.com/th/id/R726ed444b407e764e8da23998f097376?rik=4zE4RYb7kqxe%2bw&riu=http%3a%2f%2fgeomatrixgames.com%2floja%2fimages%2fps2_godwar2dvd99.jpg%3fosCsid%3d34c756462e7571645e2b30f5961ae591&ehk=tU1n2Gh%2bINPALhpeK7jTJysFFFMCaSSndIZuHpv6lh4%3d&risl=&pid=ImgRaw" alt="Jogo God of War">
+            <h1> god of War </h1>
+          </button>
+
+        </fieldset>
+
+        <fieldset>
+          <legend id="legens">Populares</legend>
+          <button>
+            <img class="img" src="https://i.pinimg.com/736x/38/85/3f/38853ffeb076db939f201061b3ca9106.jpg" alt="Filme Harry potter">
+            <h1> League of Legends</h1>
+          </button>
+          <button>
+            <img class="img" src="https://th.bing.com/th/id/Rc7c541fd332687e3cfff8e0ef94bd326?rik=EHwgLwagKdNTyA&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f501538-counter-strike-global-offensive-playstation-3-front-cover.jpg&ehk=6HZVtMYkBdxT0GEUiW0oNjO9duGGroOz51InpJO%2fhjc%3d&risl=&pid=ImgRaw" alt="Jogo CS GO">
+            <h1> CS: GO </h1>
+          </button>
+          <button>
+            <img class="img" src="https://as01.epimg.net/meristation/imagenes/2020/03/02/game_cover/859678831583141658.jpg" alt="Jogo Valorant">
+            <h1> Valorant </h1>
+          </button>
+          <button>
+            <img class="img" src="https://cdn.releases.com/img/image/35ef95ae-5197-4f67-a0cb-54a400dc0fba.jpg/300" alt="Jogo Overwatch">
+            <h1> OverWatch </h1>
+          </button>
+
+        </fieldset>
+
+      </div>
+
+      <!-- apresentação dos Livros  -->
+
+      <div id="livros">
+        <Button onclick="erro()" id="livro" style="--color:#f800ed">Veja os Livros </Button>
+      </div>
+    </div>
+
+    <!-- rodapé da pagina  -->
+
+    <footer>
+      <img class="alura" src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" alt="logo alura">
+      <p> <a href="https://github.com/PTomilhero27" target="_blank"> GitHub</a> | <a target="_blank" href="https://codepen.io/ptomilhero27">CodePen </a>&copy; <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="Logo Alura"></p>
+    </footer>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>
