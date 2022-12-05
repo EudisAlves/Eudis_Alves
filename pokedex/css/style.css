@@ -30,7 +30,7 @@ main {
     position: absolute;
     bottom: 53%;
     left: 47%;
-    transform: translate(-49%, 21%);
+    transform: translate(-49%, 21%); /* usar porcentagem para que acompanhe o tamanho da tela*/
     height: 17%;
 }
 
