@@ -1,0 +1,24 @@
+
+body {
+    text-align: center;
+    background-color: lightblue;
+    color: black;
+    font: normal 20pt italic;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 550px ifr;
+    background-color: #E0F6FF;
+    border: 1px #1E96FF;
+
+}
+
+.grid-item {
+    background-color: wheat;
+    color: black;
+    text-align: center;
+    margin: 2px;
+    border: 1px black;
+
+}
