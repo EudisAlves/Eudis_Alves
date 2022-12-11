@@ -1,0 +1,83 @@
+* {
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(36, 2, 2);
+    color: aliceblue;
+    display: flex;/*aki eu vou tirar o efeito de bloco que vem por padrão*/
+    align-items: center;
+    justify-content: space-around;/*aki vou espalhar os itens no espaco do pai deles*/
+}
+
+header img {
+    width: 150px;
+}
+
+header nav ul { /* discriminei para que outras listas não seja alterada*/
+    list-style: none;
+    display: flex;
+}
+
+header ul li + li {/*usei um haking para eliminar os bug de lista com links*/
+    margin-left: 28px;
+}
+
+header a {
+    color: aliceblue;
+    text-decoration: none; /*usei para tirar o sublinahdo*/
+    transition: color 1s; /*para suavisar a troca de corres*/
+}
+
+header a:hover {
+    color: red;
+}
+
+/*subcabeçalho*/
+
+.hero {
+    height: 310px;
+    background-image: url(../vingadores/img/banner.jpg);/*importar da pasta de image*/
+    background-size: cover;/*tratamento do banner*/
+    background-position: center 25%;/*tratamento do banner*/
+    display: flex;
+    flex-direction: column;/*para colocar os dots abaixo do texto*/
+    justify-content: flex-end;/*com o efeito de flex-diretion foi preciso
+    enverter os atributos entre justify e align*/
+    align-items: center;
+    color: aliceblue;
+    padding: 10px;
+}
+
+/*dots*/
+
+.dots span {/*dots principal*/
+    display: inline-block;
+    background-color: aliceblue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.dots span +span {/*haking para controlar margem*/
+    margin-left: 10px;
+}
+
+.dots .active {/*feito de ativo*/
+    background-color: red;
+}
+
+/*galeria de imagens*/
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+}
