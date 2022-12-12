@@ -77,7 +77,36 @@ header a:hover {
 
 /*galeria de imagens*/
 
+.gallery {
+    max-width: 1200px;/*aki eu delimito o tamanho maximo*/
+    padding: 0 24px;
+    margin: 20px auto 0;/*aki pra ganrantir coloquei 20px para top e 0 para o 
+    botton e auto para direita e esquerda*/
+}
+
+.gallery h2 {
+    margin-bottom: 35px;
+    border-left: 4px solid red;
+    padding: 8px;
+}
+
 .gallery-row {
     display: flex;
+    gap: 25px;/*para separar os elementos do row*/
     flex-wrap: wrap;
+}
+
+.gallery-row div {
+    flex: 1 1 250px;/*aki é para dar
+    capascidade de esticar e encolher*/
+}
+
+.gallery-row img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery p {
+    font-weight: bold;
 }
