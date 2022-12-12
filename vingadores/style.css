@@ -9,11 +9,16 @@ body {
 }
 
 header {
+    padding: 7px 24px;
     background-color: rgb(36, 2, 2);
     color: aliceblue;
     display: flex;/*aki eu vou tirar o efeito de bloco que vem por padrão*/
     align-items: center;
     justify-content: space-around;/*aki vou espalhar os itens no espaco do pai deles*/
+    flex-wrap: wrap;
+    /*essas duas ultimas funções é para tratar os espaçamentos*/
+    row-gap: 8px;
+    column-gap: 24px;
 }
 
 header img {
@@ -79,8 +84,8 @@ header a:hover {
 
 .gallery {
     max-width: 1200px;/*aki eu delimito o tamanho maximo*/
-    padding: 0 24px;
-    margin: 20px auto 0;/*aki pra ganrantir coloquei 20px para top e 0 para o 
+    padding: 0 25px;
+    margin: 30px auto 0;/*aki pra ganrantir coloquei 20px para top e 0 para o 
     botton e auto para direita e esquerda*/
 }
 
@@ -109,4 +114,71 @@ header a:hover {
 
 .gallery p {
     font-weight: bold;
+}
+
+.history {
+    margin: 60px 0 0;
+    padding: 92px 24px 0;
+    background-color: black;
+    color: aliceblue;
+    border-top: solid 4px red;
+}
+
+.history .container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex; 
+   align-items: center;
+   flex-wrap: wrap;
+   border-bottom: solid 2px red;
+   gap: 24px;
+}
+
+.history .container .col {
+    flex: 1 1 350px;
+}
+
+.history .container .col img {
+    width: 100%;
+    display: block;
+}
+
+.history h2 {
+    margin-bottom: 35px;
+    border-left: 4px solid red;
+    padding: 8px;
+}
+
+.history p {
+    line-height: 1.5;
+}
+
+.history p + p {
+    margin-top: 24px;
+}
+
+.history a {
+    color: red;
+    transition: color 0.8s;
+}
+
+.history a:hover {
+    color: aliceblue;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+    padding: 54px;
+    line-height: 1.5;
+    align-items: center;
+}
+
+footer a {
+    color: red;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: aliceblue;
 }
