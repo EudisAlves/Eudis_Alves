@@ -62,17 +62,17 @@ header a:hover {
 
 /*dots*/
 
-.dots span {/*dots principal*/
+.dots button {/*dots principal*/
     display: inline-block;
     background-color: aliceblue;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     margin-top: 10px;
     cursor: pointer;
 }
 
-.dots span +span {/*haking para controlar margem*/
+.dots button + button {/*haking para controlar margem*/
     margin-left: 10px;
 }
 
@@ -153,7 +153,7 @@ header a:hover {
     line-height: 1.5;
 }
 
-.history p + p {
+.history p + p {/*haking para corrigir os espaçamentos*/
     margin-top: 24px;
 }
 
