@@ -1,3 +1,26 @@
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    min-height: 15vh;
+    background-color: black;
+    color: aqua;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 15px;
+    border: solid green;
+}
+
+main {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -11,7 +34,6 @@
     width: 100%;
     aspect-ratio: 3/4;/*para que o tamanho não se pecar idependente
     do tamanho da tela*/
-    background-color: #333;
     border-radius: 5px;
     position: relative;
     transition: all 1s; /*efeito de virar a carta*/
@@ -22,21 +44,27 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    border: solid 2px rgb(7, 145, 26);
+    transition: all 400ms ease;
 }
 
 .front {
-    background-image: url(../img/jerry.png);
-    background-size: cover;
-    background-position: center;
+    transform: rotateY(180deg);
 }
 
 .back {
     background-image: url('../img/back.png');
-    background-size: cover;
-    background-position: center;
     backface-visibility: hidden;/*para esconder back da carta*/
 }
 
-.card:hover {
+.reveal-card {
     transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
