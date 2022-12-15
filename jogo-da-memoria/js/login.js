@@ -10,13 +10,15 @@ const validateInput = ({ target }) => {
 
     button.setAttribute('disabled', '');
 }
-
+/*função para trocar de pagina */
 const handlerSubmit = (event) => {
-    event.preventDeflaut();
+    event.preventDefault();
 
-    localStorage.setItem('player', input.value);/*aqui iremos salvar as informações
+    localStorage.setItem('player', input.value);
+    /*aqui iremos salvar as informações
      no navegador pessoal*/
-    window.location = 'pages/game.html';/*para trocar para pagina do jogo */
+    window.location = 'pages/game.html';
+    /*para trocar para pagina do jogo */
 }
 
 input.addEventListener('input', validateInput);

@@ -1,0 +1,42 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    aspect-ratio: 3/4;/*para que o tamanho não se pecar idependente
+    do tamanho da tela*/
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    transition: all 1s; /*efeito de virar a carta*/
+    transform-style: preserve-3d;/*para mostrar a frente da carta*/
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.front {
+    background-image: url(../img/jerry.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    background-image: url('../img/back.png');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;/*para esconder back da carta*/
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
