@@ -34,8 +34,8 @@ const checkEndGame = () => {
 
     const disabledCards = document.querySelectorAll('.disabled-card');
 
-    if (disabledCards.length == 20) {
-        alert('Parabéns, você conseguiu!!!');
+    if (disabledCards.length === 20) {
+        alert('Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}');
     }
 }
 
@@ -77,12 +77,12 @@ const revealCard = ({target}) => {
         return;/*aki é para verificar e a carta ja foi virada na seguencia*/
     }
 
-    if (firstCard == '') {/*aki é pra revelar a primeira carta */
+    if (firstCard === '') {/*aki é pra revelar a primeira carta */
 
         target.parentNode.classList.add('reveal-card');
         firstCard = target.parentNode;
 
-    } else if (secondCard == '') {/*aki a segunda carta */
+    } else if (secondCard === '') {/*aki a segunda carta */
         target.parentNode.classList.add('reveal-card');
         secondCard = target.parentNode;
 
@@ -125,8 +125,19 @@ const loadGame = () => {
     });
 }
 
+const startTimer = () => {/*função do temporizador */
+
+    this.loop = setInterval(() => {
+        const currentTime = +timer.innerHTML;
+        timer.innerHTML = currentTime + 1;
+    }, 1000);
+
+}
+
 window.onload = () => {
-    
+    /*recuperar o nome do player salvo no navegador */
+    spanPlayer.innerHTML = localStorage.getItem('player');
+    startTimer();
     loadGame();
 }
 
