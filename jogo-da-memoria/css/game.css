@@ -23,6 +23,16 @@ header {
     padding: 10px;
 }
 
+.git {
+    display: flex;
+    background-color: green;
+    color: rgb(14, 15, 14);
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding: 15px;
+}
+
 main {
     background-image: url('../img/bg.jpg');
     background-size: cover;
