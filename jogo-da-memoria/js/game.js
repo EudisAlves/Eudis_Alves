@@ -35,7 +35,7 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
 
     if (disabledCards.length === 20) {
-        alert('Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}');
+        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
     }
 }
 
