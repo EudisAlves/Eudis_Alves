@@ -13,6 +13,12 @@ header {
     border: solid green;
 }
 
+.velha {
+    display: flex;
+    color: aqua;
+    padding: 10px;
+}
+
 main {
     background-image: url('../img/bg.jpg');
     background-size: cover;
