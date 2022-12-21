@@ -18,26 +18,37 @@
     'menu main main main'
     'footer footer footer footer';
     gap: 1px;
-    background-color: rgb(55, 250, 6);
+    background-color: rgb(3, 250, 44);
 }
 
 .grid-conteiner > div {
-    background-color: black;
+    background-color: rgb(97, 94, 94);
     padding: 50px 0;
     font-size: 20px;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 
 .item1 {
     width: 100%;
     height: 150px;
     max-height: 250px;
+    display: flex;
+}
+
+#g {
+    width: 70px;
+    margin: 250px;
 }
 
 .item2 {
     
     font: normal 2px Caramelo ;
+}
+
+#link {
+    width: 80px;
 }
 
 .paragrafo {
@@ -60,8 +71,8 @@
 
 .item3 h3 {
     justify-content: center;
-    margin: 10px;
-    padding: 35px;
+    margin: px;
+    padding: px;
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -103,7 +114,6 @@ a {
 .img1 {
     width: 350PX;
     border: solid rgb(7, 250, 7);
-    cursor: pointer;
     border-radius: 15px;
 }
 
@@ -118,7 +128,6 @@ a {
 }
 
 .b {
-    display:inline-flex;
     background: rgb(48, 5, 240);
     border: solid 1px rgb(113, 227, 247);
     border-radius: 5px;
