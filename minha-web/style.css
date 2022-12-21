@@ -12,10 +12,9 @@
 
 .grid-conteiner {
     display: grid;
-    color: #fff;
+    color: rgb(220, 247, 220);
     grid-template-areas: 
     'header header header header'
-    'menu main main main'
     'menu main main main'
     'footer footer footer footer';
     gap: 1px;
@@ -23,11 +22,10 @@
 }
 
 .grid-conteiner > div {
-    
-    background-color: rgb(15, 1, 1);
-    text-align: center;
-    padding: 2px 0;
+    background-color: black;
+    padding: 50px 0;
     font-size: 20px;
+    text-align: center;
     align-items: center;
 }
 
@@ -42,45 +40,56 @@
     font: normal 2px Caramelo ;
 }
 
-.h {
-    margin: 50px;
-}
-
 .paragrafo {
-
+    
     margin: 20px auto;
     width: 250px;
 }
 
-.item3 {
-    padding: 5px;
-    justify-content: space-between;
-}
 
 .des {
     width: 100%;
-    padding: 20px;
+    padding: 30px;
+}
+
+.hr {
+    width: 85%;
+    margin-left: 85px;
+    background-color: #1af7ec;
 }
 
 .item3 h3 {
-    padding: 15px;
+    justify-content: center;
+    margin: 10px;
+    padding: 35px;
     align-items: center;
     box-sizing: border-box;
+    display: flex;
+}
+
+.p {
+    padding: 30px;
+}
+
+a {
+    cursor: pointer;
+    width: 15rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin: 50px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .link {
-    margin: 10px;
-    cursor: pointer;
-    width: 5rem;
-    height: 2rem;
-    font-size: 1rem;
-    --color: rgb(41, 248, 14);
+    --color: rgb(49, 248, 9);
     color: var(--color);
     transition: all .2s ease-in;
     border-radius: 5px;
-    border: solid 1px rgb(46, 248, 6);
+    border: solid 1px rgb(69, 253, 7);
     background-color: rgb(1, 1, 17);
-    text-decoration: none;
 }
 
 .link:hover {
@@ -98,34 +107,35 @@
     border-radius: 15px;
 }
 
+.img2 {
+
+    width: 100px;
+}
+
+.img3 {
+
+    width: 28px;
+}
+
 .b {
-    text-decoration: none;
-    margin: 10px auto;
-    width: 40px;
-    height: 20px;
+    display:inline-flex;
     background: rgb(48, 5, 240);
     border: solid 1px rgb(113, 227, 247);
     border-radius: 5px;
     --color: #1af7ec;
     color: var(--color);
-    font-size: 1rem;
     transition: all .2s ease-in;
-    cursor: pointer;
 }
 
 .b:hover {
     background: var(--color);
-    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 150px var(--color);/*sombras*/
-    color: #fff;
-    border: solid 1px rgb(79, 241, 228);
-    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 150px var(--color);
+    color: black;
 }
 
-.item4 h3 {
-    width: 100%;
+.item4 {
+    padding: 50px;
+    max-height: 150px;
+    
+}
 
-    background-color: black;
-}
-.h3 {
-    width: 100%;
-}
