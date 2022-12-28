@@ -12,28 +12,32 @@
 
 .grid-conteiner {
     display: grid;
+    max-width: 1450px;
+    min-width: 900px;
+    margin: 0 auto;
     color: rgb(220, 247, 220);
     grid-template-areas: 
     'header header header header'
     'menu main main main'
     'footer footer footer footer';
     gap: 1px;
-    background-color: rgb(3, 250, 44);
+    background: linear-gradient(
+    90deg,
+    rgb(46, 248, 248) 0%,
+    rgb(255, 208, 0) 50%,
+    rgb(17, 0, 255) 100%
+  );
 }
 
 .grid-conteiner > div {
     background-color: rgb(97, 94, 94);
-    padding: 50px 0;
     font-size: 20px;
     text-align: center;
     align-items: center;
-    position: relative;
 }
 
 .item1 {
-    width: 100%;
     height: 150px;
-    max-height: 250px;
     display: flex;
 }
 
@@ -42,19 +46,21 @@
     margin: 250px;
 }
 
-.item2 {
+.item2 {   
     
-    font: normal 2px Caramelo ;
 }
 
 #link {
     width: 80px;
+    height: 60px;
+    padding: 10px auto;
+    margin: 20px auto;
 }
 
 .paragrafo {
     
-    margin: 20px auto;
-    width: 250px;
+    margin: 5px auto;
+    width: 200px;
 }
 
 
@@ -69,16 +75,22 @@
     background-color: #1af7ec;
 }
 
+.item3 {
+    padding: 20px;
+}
+
 .item3 h3 {
     justify-content: center;
-    margin: px;
-    padding: px;
     align-items: center;
     box-sizing: border-box;
     display: flex;
 }
 
 .p {
+    padding: 10px;
+}
+
+h2 {
     padding: 30px;
 }
 
@@ -143,8 +155,8 @@ a {
 }
 
 .item4 {
-    padding: 50px;
-    max-height: 150px;
-    
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }
-
