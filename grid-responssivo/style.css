@@ -1,13 +1,19 @@
 body,
-ul {
+ul {/*reset*/
   margin: 0px;
   padding: 0px;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
 }
 
 a {
   color: black;
   text-decoration: none;
-  font-family: sans-serif;
 }
 
 a:hover {
@@ -27,6 +33,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   background: #e7e7e7;
+  grid-area: header;
+  grid-column: header;
 }
 
 #menu {
@@ -52,16 +60,17 @@ a:hover {
     top: 70px;
     right: 0px;
     background: #e7e7e7;
-    transition: 0.6s;
-    z-index: 1000;
+    transition: 0.6s; /*controlar a transição de tela*/
+    z-index: 1000;/*o z-index é para sobrepor o elemento sobre todos os outros é importante colocar um valor alto nele*/
     height: 0px;
+    /*esconder os itens da lista*/
     visibility: hidden;
     overflow-y: hidden;
   }
   #nav.active #menu {
-    height: calc(100vh - 70px); /*o tamanho de 100vh é para ocupar toda tela*/
-    visibility: visible;
-    overflow-y: auto;
+    height: calc(100vh - 70px); /*o tamanho de 100vh é para ocupar toda tela e o -70px é pra não haver um scroll*/
+    visibility: visible;/*agora mostrar os itens do menu*/
+    overflow-y: auto;/*caso haja varios itens no menu, esse comando vai criar um scroll para que possamos acessar*/
   }
   #menu a {
     padding: 1rem 0;
@@ -77,24 +86,31 @@ a:hover {
     cursor: pointer;
     gap: 0.5rem;
   }
-  #hamburger {
+
+  /*icone do menu*/
+  #hamburger {/*barra do menu*/
     border-top: 2px solid;
     width: 20px;
   }
+  /*para não criar varios span*/
   #hamburger::after,
   #hamburger::before {
     content: '';
     display: block;
     width: 20px;
     height: 2px;
-    background: currentColor;
+    background: currentColor;/*currentColor ele cria uma variavel para importar a cor de um elemento
+    no caso aki do hamburger*/
     margin-top: 5px;
     transition: 0.3s;
     position: relative;
   }
-  #nav.active #hamburger {
+
+  /*criar o x do menu*/
+  #nav.active #hamburger { /*esconder a bordar do topo*/
     border-top-color: transparent;
   }
+  /*criar o movimentação das barras*/
   #nav.active #hamburger::before {
     transform: rotate(135deg);
   }
@@ -102,4 +118,43 @@ a:hover {
     transform: rotate(-135deg);
     top: -7px;
   }
+}
+
+/*---main---*/
+
+#grid-container {
+  display: grid;
+  grid-template-areas: 
+  "header header header",
+  "sidenav main main",
+  "sidenav main main",
+  "footer footer footer";
+  max-width: 1250px;
+  margin: 0 auto;
+  border: 1px solid rgb(10, 10, 10);
+  gap: 1px;
+}
+
+#sidenav {
+  width: 250px;
+  height: 700px;
+  background-color: aqua;
+  grid-area: "sidenav";
+  grid-template-columns: sidenav;
+}
+
+#main {
+  width: 1000px;
+  height: 700px;
+  background-color: aquamarine;
+  grid-area: "main";
+  grid-column: main;
+}
+
+#footer {
+  width: 1250px;
+  height: 70px;
+  background-color: rgb(88, 85, 85);
+  grid-area: "footer";
+  grid-column: footer;
 }
