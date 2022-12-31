@@ -25,6 +25,8 @@ a:hover {
   font-weight: bold;
 }
 
+
+
 #header {
   box-sizing: border-box;
   height: 70px;
@@ -59,7 +61,7 @@ a:hover {
     width: 100%;
     top: 70px;
     right: 0px;
-    background: #e7e7e7;
+    background: #313030;
     transition: 0.6s;
     z-index: 1000;
     height: 0px;
@@ -126,7 +128,6 @@ a:hover {
 
 
 .main {
-  display: ;
   background: black;
   margin-top: 1px;
   align-items: center;
@@ -135,18 +136,11 @@ a:hover {
 
 }
 
-
-
-.des {
-    width: 100%;
-    padding: 30px;
+#g {
+    width: 35px;
+    padding: 8px;
 }
 
-.hr {
-    width: 85%;
-    margin-left: 85px;
-    background-color: #1af7ec;
-}
 
 .img1 {
   width: 350px;
@@ -163,11 +157,8 @@ a:hover {
     width: 100%;
     padding: 30px;
 }
-
 .hr {
-    width: 85%;
-    margin-left: 85px;
-    background-color: #1af7ec;
+  width: 80%;
 }
 
 .item3 {
