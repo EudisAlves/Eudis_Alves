@@ -90,8 +90,10 @@
     padding: 10px;
 }
 
-h2 {
-    padding: 30px;
+.paragrafo {
+    
+    margin: 5px auto;
+    width: 200px;
 }
 
 a {
@@ -119,7 +121,35 @@ a {
     background: var(--color);
     box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 150px var(--color);
     color: #fff;
+   width: 350PX;
+    border: solid rgb(7, 250, 7);
+    border-radius: 15px;
+}
+
+.img2 {
+
+    width: 100px;
+}
+
+.img3 {
+
+    width: 28px;
+}
+
+.b {
+    background: rgb(48, 5, 240);
+    border: solid 1px rgb(113, 227, 247);
     border-radius: 5px;
+    --color: #1af7ec;
+    color: var(--color);
+    transition: all .2s ease-in;
+}
+
+.b:hover {
+    background: var(--color);
+    box-shadow: 0 0 5px var(--color), 0 0 25px var(--color), 0 0 50px var(--color), 0 0 150px var(--color);
+    color: black;
+}   border-radius: 5px;
     border: solid 1px rgb(7, 250, 48);
 }
 

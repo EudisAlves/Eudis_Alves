@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Mobile</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <header id="header">
-    <a id="logo" href="">Logo</a>
+  <header id="header" class="item1">
+    <a href="/" id="logo">Eudis Alves</a>
+    </div>
     <nav id="nav">
       <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
         <span id="hamburger"></span>
@@ -19,16 +20,46 @@
       <ul id="menu" role="menu">
         <li><a href="/">Sobre</a></li>
         <li><a href="/">Galeria</a></li>
-        <li><a href="/">GitHub</a></li>
-        <li><a href="/">Linkedin</a></li>
+        <li><a href="https://github.com/EudisAlves">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/eudis-alves-342744179">Linkedin</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="grid-container">
-    <div id="sidenav"></div>
-    <div id="main"></div>
-    <div id="footer"></div>
+    <div class="main">
+      <h2 class="des">Destaques</h2><hr class="hr">
+            
+            <h3><a href="https://eudisalves-jogodavelha.netlify.app" class="b">Jogo da Velha</a></h3>
+            <img src="./img/Captura de Tela (2).png" class="img1" alt="tabuleiro do jogo da velha">
+            
+            <P class="p">O jogo foi uma obra para estudos de eventos cliques<BR>
+                onde busquei aplicar conceitos básicos de
+                JavaScript com HTML5 e CSS 3.,<BR>
+                    Uma aplicação basica e simplificada da linguagem<br>
+                    JavaScript, o código completo está no meu github,link abaixo:<br>            
+                </P>
+                
+    
+                <h3><a href="https://eudisalves-jogo-da-memoria.netlify.app" class="b">Jogo da memória</a></h3>
+
+            <img src="./img/memoria.jpeg" class="img1" alt="imagem do jogo da mamória">
+
+            <p class="p">No jogo da memória apliquei mais conceitos basicos e avançados<br>
+                em JavaScript, e um trabalho ainda maior em html 5 e css 3,<br>
+                usando um trabalho ainda mair no visual e conceitos de logicas<br>
+                de programação bem interessantes! Confira o código no meu Github<br>
+                link abaixo:<br>
+            </p>
+    </div>
+    <div class="footer">
+      <div class="item4">
+            <h3 class="footer">linguagens em estudos</h3>
+            <img src="./img/klipartz.com.png" alt="icone do JavaScript" class="img2">
+            <img src="./img/nodejs.png" alt="icone do node js" class="img3">
+            <img src="./img/react.png" alt="" class="img3">
+        </div>
+    </div>
   </main>
   <script src="./script.js"></script>
 </body>
