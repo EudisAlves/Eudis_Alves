@@ -1,8 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: rgb(58, 58, 61);
 }
 
 #snake {
+  justify-content: center;
+  align-items: center;
   border: 5px solid rgb(14, 0, 0);
 }
