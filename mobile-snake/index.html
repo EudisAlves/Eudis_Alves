@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Mobile</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="container">
-        <h1 class="h1">Game Snake</h1>
-
-        <div class="game-container">
-            <canvas class="game-canvas" id="gc" width="400" height="400"></canvas>
-        </div>
-
-        <div class="key">
-            <a class="up arr" onclick="Snake.action('up')">
-            <i class="seta up"></i></a>
-            <br/>
-            <a class="left arr" onclick="Snake.action('left')">
-            <i class="seta left"></i></a>
-            <a class="down arr" onclick="Snake.action('down')">
-            <i class="seta down"></i></a>
-            <a class="rigth arr" onclick="Snake.action('rigth')">
-            <i class="seta rigth"></i></a>
-        </div>        
-    </div>
-
-    <script src="script.js"></script>
+  <div id="game-container">
+    <h1 class="h1">Game Snake</h1>
+    <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+  </div>
+  <div class="keys">
+    <a class="up arr" onclick="Snake.action('up')">
+      <i class="chevron up"></i></a>
+    <br />
+    <a class="left arr" onclick="Snake.action('left')">
+      <i class="chevron left"></i></a>
+    <a class="down arr" onclick="Snake.action('down')">
+      <i class="chevron down"></i></a>
+    <a class="right arr" onclick="Snake.action('right')">
+      <i class="chevron right"></i></a>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>

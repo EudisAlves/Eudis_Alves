@@ -121,7 +121,7 @@ var Snake = (function () {
                 if (player.y < 1) game.reset();
                 if (player.y > tileCount - 2) game.reset();
 
-                ctx.fillStyle = 'yellow'
+                ctx.fillStyle = 'grey';
                 ctx.fillRect(0, 0, gridSize - 1, canv.height);
                 ctx.fillRect(0, 0, canv.width, gridSize - 1);
                 ctx.fillRect(canv.width - gridSize + 1, 0, gridSize, canv.height);
@@ -137,6 +137,8 @@ var Snake = (function () {
             if (velocity.x == 0 && velocity.y == 1) lastAction = ActionEnum.down;
             if (velocity.x == -1 && velocity.y == 0) lastAction = ActionEnum.left;
             if (velocity.x == 1 && velocity.y == 0) lastAction = ActionEnum.right;
+             
+            //tabuleiro
 
             ctx.fillStyle = 'rgb(50,20,60)';
             ctx.fillRect(0, 0, canv.width, canv.height);
@@ -318,6 +320,6 @@ var Snake = (function () {
 
 })();
 
-Snake.start(5);
+Snake.start(8);
 Snake.setup.keyboard(true);
 Snake.setup.fixedTail(false);
