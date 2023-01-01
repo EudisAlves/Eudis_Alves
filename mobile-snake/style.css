@@ -1,115 +1,108 @@
-* {
-    margin: 0px;
+body {
+  margin: 0;
 }
 
 .h1 {
-    
     text-align: center;
-    width: 100vw;
-    height: 50px;
     background-color: black;
     color: aqua;
-
-}
-
-.game-container {
-    background: linear-gradient(
-        90deg,
-        rgb(231, 46, 248) 0%,
-        rgb(49, 153, 238) 50%,
-        rgb(178, 178, 180) 100%
-    );
-}
-.game-canvas {
-    padding: 15px;
-    width: 100%;
-    height: 100vw;
-    max-width: 500px;
-    max-height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.keys {
-    font-family: 'lato', sans-serif;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    height: 200px;
-    margin: auto;
-    height: 100vh;
-    background: linear-gradient(
-        90deg,
-        rgb(231, 46, 248) 0%,
-        rgb(49, 153, 238) 50%,
-        rgb(178, 178, 180) 100%
-    );
-}
-
-.up {
-    position: relative;
-    top: -4px;
-}
-
-.chevron::before {
-    border-style: solid;
-    border-width: 8px 8px 0 0;
-    content: '';
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    top: -10px;
-    position: relative;
-    transform: rotate(-45deg);
-}
-
-.chevron.down::before {
-    transform: rotate(135deg);
-    top: -22px;
-}
-.chevron.rigth::before {
-    transform: rotate(45deg);
-    top: -18px;
-    left: -5px;
-}
-
-.chevron.left::before {
-    transform: rotate(225deg);
-    top: -18px;
-    left: 5px;
-}
-
-.arr {
-    cursor: pointer;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    line-height: 100px;
-    background: rgb(244, 218, 247);
-    color: rgb(8, 6, 1);
-    font-size: 50px;
-    border-left: 10px solid rgb(76, 69, 92);
-    border-right: 10px solid rgb(112, 110, 110);
-    border-bottom: 10px rgb(8, 2, 2);
-    border-top: 10px rgb(8, 7, 7);
-    display: inline-block;
-    margin: 5px;
-    transition: all 0.05s linear;
-    user-select: none;
-}
-
-.arr:active { /*efeito de toque*/
-    background: rgb(248, 252, 2);
+    width: 100vw;
+    height: 50px;
 }
 
 #game-container {
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(
-        90deg,
-        rgb(231, 46, 248) 0%,
-        rgb(49, 153, 238) 50%,
-        rgb(178, 178, 180) 100%
-    );
+    90deg,
+    rgb(231, 3, 252) 0%,
+    rgb(76, 173, 238) 50%,
+    rgb(174, 169, 241) 100%
+  );
 }
+
+.game-canvas {
+  width: 100%;
+  height: 100vw;
+  max-width: 500px;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
+.keys {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+  margin: auto;
+  background: linear-gradient(
+    90deg,
+    rgb(231, 3, 252) 0%,
+    rgb(76, 173, 238) 50%,
+    rgb(174, 169, 241) 100%
+  );
+  height: 100vh;
+}
+
+.up {
+  position: relative;
+  top: -4px;
+}
+
+.chevron::before {
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.chevron.down::before {
+  transform: rotate(135deg);
+  top: -22px;
+}
+
+.chevron.right::before {
+  transform: rotate(45deg);
+  top: -18px;
+  left: -5px;
+}
+
+.chevron.left::before {
+  transform: rotate(225deg);
+  top: -18px;
+  left: 5px;
+}
+
+.arr {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 100px;
+  background: rgb(134, 190, 241);
+  color: rgb(56, 54, 54);
+  font-size: 50px;
+  border-right: 10px solid rgb(32, 32, 32);
+  border-bottom: 10px solid rgb(19, 18, 18);
+  border-left: 10px solid rgb(151, 146, 146);
+  border-top: 10px solid rgb(136, 133, 133);
+  display: inline-block;
+  margin: 5px;
+  transition: all .05s linear;
+  user-select: none;
+}
+
+.arr:active {
+  background: rgb(193, 243, 11);
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(220, 220, 

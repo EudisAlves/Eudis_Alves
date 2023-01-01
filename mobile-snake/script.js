@@ -1,6 +1,6 @@
 var Snake = (function () {
 
-    const INITIAL_TAIL = 4;
+    const INITIAL_TAIL = 2;
     var fixedTail = true;
 
     var intervalID;
@@ -320,6 +320,6 @@ var Snake = (function () {
 
 })();
 
-Snake.start(8);
+Snake.start(5);
 Snake.setup.keyboard(true);
 Snake.setup.fixedTail(false);
