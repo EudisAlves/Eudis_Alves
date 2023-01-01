@@ -3,11 +3,19 @@
 }
 
 .game-container {
-    background-color: aqua;
-    border: 1px solid;
-}
 
+    padding: 20px;
+    background: linear-gradient(
+        90deg,
+        rgb(231, 46, 248) 0%,
+        rgb(49, 153, 238) 50%,
+        rgb(178, 178, 180) 100%
+        );
+    }
+    
 .game-canvas {
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vw;
     max-width: 500px;
@@ -24,6 +32,13 @@
     box-sizing: border-box;
     height: 200px;
     margin: auto;
+    background: linear-gradient(
+        90deg,
+        rgb(231, 46, 248) 0%,
+        rgb(49, 153, 238) 50%,
+        rgb(178, 178, 180) 100%
+    );
+    height: 100vh;
 }
 
 .up {
@@ -66,25 +81,25 @@
     height: 70px;
     text-align: center;
     line-height: 100px;
-    background: gray;
-    color: wheat;
+    background: rgb(244, 218, 247);
+    color: rgb(8, 6, 1);
     font-size: 50px;
-    border-left: 10px solid #ccc;
-    border-right: 10px solid #ddd;
-    border-bottom: #ccc;
-    border-top: #eee;
+    border-left: 10px solid rgb(76, 69, 92);
+    border-right: 10px solid rgb(112, 110, 110);
+    border-bottom: 10px rgb(8, 2, 2);
+    border-top: 10px rgb(8, 7, 7);
     display: inline-block;
-    margin: 5px;
+    margin: 15px;
     transition: all 0.05s linear;
     user-select: none;
 }
 
 .arr:active { /*efeito de toque*/
-    background: #555;
+    background: rgb(248, 252, 2);
 }
 
 #game-container {
     display: flex;
     flex-direction: column;
-    background-color: rgba(220, 220, 220, 0.6);
+    background-color: rgba(125, 166, 219, 0.6);
 }
