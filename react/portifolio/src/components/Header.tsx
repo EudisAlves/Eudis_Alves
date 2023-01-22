@@ -8,7 +8,7 @@ export default function Header() {
                 Eudis Alves
             </a>
             
-            <nav id="nav">
+            <nav className="nav">
                 <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
                     <span id="hamburger"></span>
                 </button>

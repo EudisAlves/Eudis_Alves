@@ -67,6 +67,7 @@ a:hover {
     height: 0px;
     visibility: hidden;
     overflow-y: hidden;
+    pointer-events: auto;
   }
   #nav.active #menu {
     height: calc(100vh - 70px);
@@ -102,13 +103,13 @@ a:hover {
     transition: 0.3s;
     position: relative;
   }
-  #nav.active #hamburger {
+  .nav.active #hamburger {
     border-top-color: transparent;
   }
-  #nav.active #hamburger::before {
+  .nav.active #hamburger::before {
     transform: rotate(135deg);
   }
-  #nav.active #hamburger::after {
+  .nav.active #hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
   }

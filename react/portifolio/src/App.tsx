@@ -3,10 +3,17 @@ import Main from "./components/Main";
 import "./App.css";
 
 export const App = () => {
+
+  const [menuIsVisible, setMenuIsVisible] = useState(true);
+
   return (
-    <div>
+    <>
+      <MenuMobile 
+        menuIsVisible={menuIsVisible}
+        setMenuIsVisible={setMenuIsVisible}
+      />
       <Header />
       <Main />
-    </div>  
+    </>  
   );
 }
