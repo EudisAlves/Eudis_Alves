@@ -1,12 +1,9 @@
-
+import HamburgerMenu from "./components/Header/HamburgerMenu"
 import "./App.css";
-import Header from './components/Header/Index';
 
 function App() {
   return (
-    
-     <Header />
-    
+    <HamburgerMenu />
   );
 }
 
