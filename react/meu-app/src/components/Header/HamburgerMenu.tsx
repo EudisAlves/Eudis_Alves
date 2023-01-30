@@ -10,18 +10,21 @@ const HamburgerMenu: React.FC<Props> = () => {
   };
 
   return (
-    <div id="nav">
-      <button onClick={toggleMenu} id="btn-menu">
-        {isOpen ? 'Close' : 'Open'} Menu
-      </button>
-      {isOpen && (
-        <ul id="menu" role="menu">
-          <li className='itens'>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
-      )}
-    </div>
+    <header className='nav'>
+
+      <div>
+        <button onClick={toggleMenu} className="btn-menu">
+          {isOpen ? 'Close' : 'Open'} Menu
+        </button>
+        {isOpen && (
+          <ul id="menu" role="menu">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        )}
+      </div>
+    </header>
   );
 };
 

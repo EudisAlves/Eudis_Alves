@@ -2,84 +2,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  background-color: #318ffa;
 }
+.nav{
+  width: 100%;
+  height: 100px;
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  color: azure;
+}
+
 
 /* HamburgerMenu.css*/
-#menu {
+.btn-menu {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(10, 10, 10);
+  color: azure;
+  justify-items: right;
+  cursor: pointer;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(5, 5, 5);
   display: flex;
-  list-style: none;
-  gap: 0.5rem;
-  background: black;
 }
 
-#menu a {
-  display: block;
-  padding: 0.5rem;
-}
-
-#btn-mobile {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  #menu {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 70px;
-    right: 0px;
-    background: #313030;
-    transition: 0.6s;
-    z-index: 1000;
-    height: 0px;
-    visibility: hidden;
-    overflow-y: hidden;
-  }
-  #nav.active #menu {
-    height: calc(100vh - 70px);
-    visibility: visible;
-    overflow-y: auto;
-  }
-  #menu a {
-    padding: 1rem 0;
-    margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-  }
-  #btn-mobile {
+@media (max-width: 767px) {
+  .menu {
     display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: #cecccc;
-    cursor: pointer;
-    gap: 0.5rem;
-  }
-  #hamburger {
-    border-top: 2px solid;
-    width: 20px;
-  }
-  #hamburger::after,
-  #hamburger::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-  }
-  #nav.active #hamburger {
-    border-top-color: transparent;
-  }
-  #nav.active #hamburger::before {
-    transform: rotate(135deg);
-  }
-  #nav.active #hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: rgb(3, 3, 3);
   }
 }
