@@ -19,6 +19,12 @@ export default function Header() {
                         Home
                         </a>
                     </p>
+                    <div className="select is-loadingloading">
+                        <select>
+                            <option>Select dropdown</option>
+                            <option>With options</option>
+                        </select>
+                    </div>
                 </div>
             </section>
         </>
