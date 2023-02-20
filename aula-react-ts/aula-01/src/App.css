@@ -14,5 +14,13 @@ body {
 .header {
   width: 100vw;
   height: 75px;
-  background: rgba(242, 242, 243, 0.514);
+  display: flex;
+  background: rgba(0, 0, 0, 0.39);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 25%;
+
 }
