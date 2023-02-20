@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Header from './components/Header'
 import './App.css'
 
 export default function App() {
@@ -6,7 +7,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Olá Mundo</h1>
+      <Header />
     </>
   )
 }

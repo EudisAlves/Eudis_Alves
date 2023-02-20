@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../public/img/Brody-STUN.jpg);
+  background-size: cover;
+
+}
+
+.header {
+  width: 100vw;
+  height: 75px;
+  background: rgba(242, 242, 243, 0.514);
+}
