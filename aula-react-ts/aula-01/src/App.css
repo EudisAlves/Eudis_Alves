@@ -6,8 +6,8 @@
 }
 
 body {
-  background-image: url(../public/img/Brody-STUN.jpg);
-  background-size: cover;
+  
+  background-color: black;
 
 }
 
@@ -15,7 +15,7 @@ body {
   width: 100vw;
   height: 75px;
   display: flex;
-  background: rgba(0, 0, 0, 0.39);
+  background: rgba(15, 5, 5, 0.637);
   justify-content: space-between;
   align-items: center;
 }
