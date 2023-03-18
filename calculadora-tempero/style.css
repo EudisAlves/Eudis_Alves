@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, 
+    rgb(252, 102, 3) 0%, 
+    rgb(0, 0, 0) 50%);
+    color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+}
+
+#tipo-carne {
+    margin: 40px;
+}
