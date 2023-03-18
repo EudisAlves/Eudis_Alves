@@ -32,5 +32,5 @@ function calcularTempero(pesoCarne, tipoCarne, tipoTempero) {
     const quantidadeTempero = calcularTempero(pesoCarne, tipoCarne, tipoTempero);
     
     // Exiba os resultados para o usuário
-    document.getElementById('resultado').innerHTML = `Você precisa de ${quantidadeTempero} gramas de ${tipoTempero} para ${pesoCarne} gramas de ${tipoCarne}.`;
+    document.getElementById('resultado').innerHTML = `Você precisa de ${quantidadeTempero} gramas para ${pesoCarne} gramas de ${tipoCarne}.`;
     };
