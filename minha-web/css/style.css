@@ -50,4 +50,8 @@ a:hover {
     #menu {
         display: none;
     }
+
+    #nav.active #menu {
+        display: flex;
+    }
 }
