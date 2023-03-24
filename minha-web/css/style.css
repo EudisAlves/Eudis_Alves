@@ -122,7 +122,7 @@ a:hover {
 /* Sidebar */
 
 .sidebar {
-  background-color: #53aafc;
+  background-color: #333;
   grid-area: s;
   color: #fcfdfb;
   text-align: center;
@@ -130,12 +130,14 @@ a:hover {
 }
 
 .contatos {
+  height: 90%;
   align-items: center;
   border: 1px solid #444;
   background: #444;
   border-radius: 10px;
   margin: 25px;
   padding: 15px;
+  box-shadow: -3px 8px 8px 8px #8905f5;
 }
 
 #foto {
@@ -157,14 +159,64 @@ p {
 /* Main */
 
 .main {
-  background: #f5bd05;
+  background: #333;
+  grid-area: m;
+  text-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.room {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25vh 20vh 20vh;
+  grid-template-areas: 
+  's s'
+  'm c'
+  'v p';
+  max-width: 800px;
+  gap: 10px;
+}
+
+.slaide {
+  
+  background: #8905f5;
+  grid-area: s;
+}
+
+.jg-memoria {
+  
+  background: #f0ebeb;
   grid-area: m;
 }
+
+.jg-cobrinha {
+  
+  background: #f78b8b;
+  grid-area: c;
+}
+
+.jg-velha {
+  grid-area:v;
+  background: #4b77f1;
+}
+
+.pokedex {
+  grid-area: p;
+  background: #9df78b;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 /* Footer */
 
 .footer {
-  background-color: #333;
+  background-color: #f75353;
   grid-area: f;
 
 }
