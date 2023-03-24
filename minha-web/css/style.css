@@ -35,6 +35,7 @@ a:hover {
     align-items: center;
     padding: 1rem;
     grid-area: h;
+    border-bottom: 2px solid rgb(71, 255, 240);
     
 }
 
@@ -73,7 +74,7 @@ a:hover {
         width: 150px;
         height: calc(45vh - 70px);
         border-radius: 5px;
-        box-shadow: rgb(0, 128, 117) -8px 8px 8px;
+        box-shadow: rgb(71, 255, 240) -8px 8px 8px;
         visibility: visible;
         overflow-y: auto;
       }
