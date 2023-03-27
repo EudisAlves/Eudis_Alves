@@ -15,6 +15,18 @@
   'f f f f';
 }
 
+@media (max-width: 600px)  {
+  .container {
+    display: block;
+  }  
+  
+  #foto {
+    width: 15px;
+    border-radius: 50px;
+  }
+  
+}
+
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -127,28 +139,32 @@ a:hover {
   grid-area: s;
   color: #fcfdfb;
   text-align: center;
-  
+  padding: 25px auto;
+  justify-content: center;
+  padding-left: 25px;
+  padding-top: 45px;
+  padding-bottom: 25px;
 }
 
 .contatos {
   height: 90%;
-  align-items: center;
+  width: 90%;
   border: 1px solid #444;
   background: #444;
   border-radius: 10px;
-  margin: 25px;
-  padding: 15px;
+  padding: 10px;
   box-shadow: -3px 8px 8px 8px #8905f5;
 }
 
 #foto {
-  width: 80%;
+  width: 60%;
   margin: 10px;
+  border-radius: 10px;
   align-items: center;
 }
 
 h4 {
-  padding: 5px;
+  padding: 2px;
 }
 
 p {
