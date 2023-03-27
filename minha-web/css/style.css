@@ -8,7 +8,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10vh 75vh 15vh;
+  grid-template-rows: 10vh 80vh 10vh;
   grid-template-areas: 
   'h h h h'
   's m m m'
@@ -23,6 +23,10 @@
   #foto {
     width: 15px;
     border-radius: 50px;
+  }
+
+  .footer {
+    height: 80px;
   }
   
 }
@@ -180,7 +184,7 @@ p {
   grid-area: m;
   text-align: center;
   align-items: center;
-  padding: 8px;
+  padding-top: 20px;
 }
 
 .room {
@@ -191,8 +195,9 @@ p {
   's s'
   'm c'
   'v p';
-  max-width: 800px;
-  gap: 10px;
+  max-width: 95%;
+  gap: 25px;
+  
 }
 
 .slaide {
@@ -233,7 +238,16 @@ p {
 /* Footer */
 
 .footer {
-  background-color: #f75353;
+  text-align: center;
+  background-color: #464646;
   grid-area: f;
+}
 
+img {
+  width: 100px;
+}
+
+#g {
+  width: 40px;
+  padding: 5px;
 }
