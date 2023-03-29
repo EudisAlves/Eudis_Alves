@@ -53,7 +53,7 @@ a:hover {
     grid-area: h;
     border-bottom: 2px solid rgb(71, 255, 240);
     
-}
+  }
 
 #menu {
     display: flex;
@@ -70,7 +70,7 @@ a:hover {
 #btn-menu {
     display: none;
     cursor: pointer;
-}
+  }
 
 @media (max-width: 600px) {
     #menu {
@@ -181,6 +181,7 @@ p {
 
 .main {
   background: #333;
+  color: #f0ebeb;
   grid-area: m;
   text-align: center;
   align-items: center;
@@ -200,22 +201,60 @@ p {
   
 }
 
+
 .slaide {
   
   background: #8905f5;
   grid-area: s;
 }
 
-.jg-memoria {
-  
-  background: #f0ebeb;
+#memoria { 
   grid-area: m;
+  display: flex;
+  padding: 5px;
+  border: 1px solid #15c5fa;
+  border-radius: 0px 50px 50px 0px;
+  color: #f0ebeb;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#btn {
+  border: 1px solid #9df78b;
+  border-radius: 0 50px 50px 0;
+  background: #4afa15;
+  cursor: pointer;
+  color: #333;
+  height: 90px;
+  padding: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn:hover {
+  background: #8905f5;
+  color: #4afa15;
+  border: #15c5fa;
+}
+
+.p {
+  font-size: 9px;
+  padding: 2px;
+}
+
+#imgs {
+  border: 1px solid #fcfdfb;
+
 }
 
 .jg-cobrinha {
   
   background: #f78b8b;
   grid-area: c;
+  
 }
 
 .jg-velha {
@@ -241,6 +280,7 @@ p {
   text-align: center;
   background-color: #464646;
   grid-area: f;
+  justify-content: center;
 }
 
 img {
