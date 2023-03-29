@@ -222,25 +222,22 @@ p {
 }
 
 #btn {
-  border: 1px solid #9df78b;
-  border-radius: 0 50px 50px 0;
-  background: #4afa15;
-  cursor: pointer;
-  color: #333;
   height: 90px;
-  padding: 15px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  border-radius: 0 50px 50px 0;
+  padding: 35px;
+  border: 1px solid #25022e;
+  background: #4afa15;
+  color: #333;
+  cursor: pointer;
 }
 
 #btn:hover {
   background: #8905f5;
   color: #4afa15;
-  border: #15c5fa;
+  
 }
 
-.p {
+p {
   font-size: 9px;
   padding: 2px;
 }
