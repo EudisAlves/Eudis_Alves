@@ -3,23 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  
+}
+
+body {
+  background: #333;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 10vh 80vh 10vh;
-  grid-template-areas: 
-  'h h h h'
-  's m m m'
-  'f f f f';
+  grid-template-areas:
+    "h h h h"
+    "s m m m"
+    "f f f f";
+  align-items: center;
+  gap: 10px;
 }
 
-@media (max-width: 600px)  {
+@media (max-width: 600px) {
   .container {
     display: block;
-  }  
-  
+  }
+
+
   #foto {
     width: 15px;
     border-radius: 50px;
@@ -27,113 +35,118 @@
 
   .footer {
     height: 80px;
+    padding-top: 15px;
   }
-  
 }
 
 a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-family: Cambria, Cochin;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: Cambria, Cochin;
 }
 
 a:hover {
-    background: #f78b8b;
+  background: #f78b8b;
 }
 
 /* Header */
 
 .header {
-    display: flex;
-    background: #333;
-    color: #fcfdfb;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    grid-area: h;
-    border-bottom: 2px solid rgb(71, 255, 240);
-    
-  }
+  display: flex;
+  background: #333;
+  color: #fcfdfb;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  grid-area: h;
+  border-bottom: 2px solid rgb(71, 255, 240);
+}
 
 #menu {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    margin: .4rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0.4rem;
 }
 
 #menu a {
-    display: block;
-    padding: .4rem;
+  display: block;
+  padding: 0.4rem;
 }
 
 #btn-menu {
-    display: none;
-    cursor: pointer;
-  }
+  display: none;
+  cursor: pointer;
+}
 
 @media (max-width: 600px) {
-    #menu {
-        display: block;
-        position: absolute;
-        width: 100%;
-        top: 70px;
-        right: 0px;
-        background: #333;
-        transition: 0.6s;
-        z-index: 1000;
-        height: 0px;
-        visibility: hidden; /* para fazer o menu ficar invisível*/
-        overflow-y: hidden; /*para colocar um scroll quando o menu for maior que a tela*/
-      }
-      #nav.active #menu {
-        width: 150px;
-        height: calc(45vh - 70px);
-        border-radius: 5px;
-        box-shadow: rgb(71, 255, 240) -8px 8px 8px;
-        visibility: visible;
-        overflow-y: auto;
-      }
-      #menu a {
-        padding: 1rem 0;
-        margin: 0 1rem;
-        
-      }
-      #btn-menu {
-        display: flex;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        color: #fcfdfb;
-        cursor: pointer;
-        gap: 0.5rem;
-      }
-      #hamburger {
-        border-top: 2px solid;
-        width: 20px;
-      }
-      #hamburger::after,
-      #hamburger::before {
-        content: '';
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: currentColor;
-        margin-top: 5px;
-        transition: 0.3s;
-        position: relative;
-      }
-      #nav.active #hamburger {
-        border-top-color: transparent;
-      }
-      #nav.active #hamburger::before {
-        transform: rotate(135deg);
-      }
-      #nav.active #hamburger::after {
-        transform: rotate(-135deg);
-        top: -7px;
-      }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #333;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden; /* para fazer o menu ficar invisível*/
+    overflow-y: hidden; /*para colocar um scroll quando o menu for maior que a tela*/
+  }
+  #nav.active #menu {
+    width: 150px;
+    height: calc(45vh - 70px);
+    border-radius: 5px;
+    box-shadow: rgb(71, 255, 240) -8px 8px 8px;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+  }
+  #btn-menu {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    color: #fcfdfb;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  .sidebar {
+    width: 90vw;
+    text-align: center;
+  }
+
+
 }
 
 /* Sidebar */
@@ -176,7 +189,6 @@ p {
   border-bottom: 1px solid #f0ebeb;
 }
 
-
 /* Main */
 
 .main {
@@ -185,30 +197,29 @@ p {
   grid-area: m;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
 }
 
+
 .room {
+  padding: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 25vh 20vh 20vh;
-  grid-template-areas: 
-  's s'
-  'm c'
-  'v p';
+  grid-template-areas:
+  "s s"
+  "m c"
+  "v p";
   max-width: 95%;
-  gap: 25px;
-  
+  gap: 15px;
 }
 
 
 .slaide {
-  
   background: #8905f5;
   grid-area: s;
 }
 
-#memoria { 
+#memoria {
   grid-area: m;
   display: flex;
   padding: 5px;
@@ -222,19 +233,20 @@ p {
 }
 
 #btn {
-  height: 90px;
-  border-radius: 0 50px 50px 0;
-  padding: 35px;
+  height: 33px;
+  width: 90px;
+  border-radius: 0 30px 30px 0 ;
+  padding: 5px;
   border: 1px solid #25022e;
   background: #4afa15;
   color: #333;
   cursor: pointer;
+  
 }
 
 #btn:hover {
   background: #8905f5;
   color: #4afa15;
-  
 }
 
 p {
@@ -244,19 +256,38 @@ p {
 
 #imgs {
   border: 1px solid #fcfdfb;
-
 }
 
 .jg-cobrinha {
-  
-  background: #f78b8b;
   grid-area: c;
-  
+  display: flex;
+  padding: 5px;
+  border: 1px solid #15c5fa;
+  border-radius: 0px 50px 50px 0px;
+  color: #f0ebeb;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgs-2 {
+  height: 83px;
 }
 
 .jg-velha {
-  grid-area:v;
-  background: #4b77f1;
+  grid-area: v;
+  display: flex;
+  padding: 5px;
+  border: 1px solid #15c5fa;
+  border-radius: 0px 50px 50px 0px;
+  color: #f0ebeb;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgs-3 {
+  height: 83px;
 }
 
 .pokedex {
@@ -265,8 +296,52 @@ p {
 }
 
 @media (max-width: 600px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
+
+  .sidebar{
+    margin-left: 30px;
+  }
+
+  .room {
+    display: block;
+    padding: 0;
+  }
+
+  .slaide {
+    height: 250px;
+  }
+
+  .jg-memoria {
+    height: 150px;
+    margin: 10px;
+    margin-left: 10px;
+  }
+
+  #imgs {
+    height: 80px;
+  }
+
+  #btn {
+    height: 50px;
+    width: 75px;
+    padding: 13px;
+    font-size: 15px;
+    text-align: justify;
+  }
+
+
+  .jg-cobrinha {
+    height: 150px;
+    margin: 10px;
+  }
+
+  .jg-velha {
+    height: 150px;
+    margin: 10px;
+  }
+
+  .pokedex {
+    height: 150px;
+    margin: 10px;
   }
 }
 
