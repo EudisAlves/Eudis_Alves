@@ -122,9 +122,15 @@ body {
   grid-area: s;
 }
 
+h4 {
+  margin: 15px;
+  color: #9df78b;
+}
+
 #memoria {
   grid-area: m;
   display: flex;
+  height: 120px;
   padding: 5px;
   border: 1px solid #15c5fa;
   border-radius: 0px 50px 50px 0px;
@@ -132,38 +138,42 @@ body {
   gap: 5px;
   justify-content: center;
   align-items: center;
-  
 }
 
 #btn {
-  height: 33px;
-  width: 90px;
-  border-radius: 0 30px 30px 0 ;
+  display: flex;
+  height: 108px;
+  width: 70px;
+  border-radius: 0 70px 70px 0 ;
   padding: 5px;
   border: 1px solid #25022e;
-  background: #4afa15;
+  background: linear-gradient(45deg, rgb(63, 251, 251) 0%, rgb(39, 1, 252) 100%);
   color: #333;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   
 }
 
 #btn:hover {
-  background: #8905f5;
-  color: #4afa15;
+  background: linear-gradient(65deg,rgb(39, 1, 252) 0%, rgb(63, 251, 251) 100%);
+  color: #b2f1b2;
 }
 
 p {
-  font-size: 9px;
+  font-size: 12px;
   padding: 2px;
 }
 
 #imgs {
-  border: 1px solid #fcfdfb;
+  height: 103px;
 }
 
 .jg-cobrinha {
   grid-area: c;
   display: flex;
+  height: 120px;
   padding: 5px;
   border: 1px solid #15c5fa;
   border-radius: 0px 50px 50px 0px;
@@ -174,12 +184,13 @@ p {
 }
 
 #imgs-2 {
-  height: 83px;
+  height: 103px;
 }
 
 .jg-velha {
   grid-area: v;
   display: flex;
+  height: 120px;
   padding: 5px;
   border: 1px solid #15c5fa;
   border-radius: 0px 50px 50px 0px;
@@ -190,12 +201,16 @@ p {
 }
 
 #imgs-3 {
-  height: 83px;
+  height: 103px;
 }
 
 .pokedex {
   grid-area: p;
-  background: #9df78b;
+  background: #a2a7a1;
+  height: 120px;
+  margin: 15px;
+  border: 1px solid #15c5fa;
+  border-radius: 0px 50px 50px 0px;
 }
 
 /* Footer */
