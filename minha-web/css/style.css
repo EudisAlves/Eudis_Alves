@@ -39,23 +39,26 @@ body {
   background: #444;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: -3px 8px 8px 8px #8905f5;
+  box-shadow: 0 0 18px  #05f5e9;
 }
 
 #foto {
   width: 90%;
   margin-top: -50px;
-  border-radius: 10px;
+  border-radius: 90px;
   align-items: center;
 }
 
-h4 {
-  padding: 2px;
+.contatos h4 {
+  font-size: 20px;
+  padding: 15px;
+  color: #6b84f7;
 }
 
-p {
-  padding: 2px;
-  border-bottom: 1px solid #f0ebeb;
+.contatos p {
+  padding: 5px;
+  border-bottom: 1px solid #05daf7;
+  font-size: 14px;
 }
 
 /* Main */
