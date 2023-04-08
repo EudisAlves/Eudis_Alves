@@ -21,132 +21,6 @@ body {
   gap: 10px;
 }
 
-@media (max-width: 600px) {
-  .container {
-    display: block;
-  }
-
-
-  #foto {
-    width: 15px;
-    border-radius: 50px;
-  }
-
-  .footer {
-    height: 80px;
-    padding-top: 15px;
-  }
-}
-
-a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-family: Cambria, Cochin;
-}
-
-a:hover {
-  background: #f78b8b;
-}
-
-/* Header */
-
-.header {
-  display: flex;
-  background: #333;
-  color: #fcfdfb;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  grid-area: h;
-  border-bottom: 2px solid rgb(71, 255, 240);
-}
-
-#menu {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  margin: 0.4rem;
-}
-
-#menu a {
-  display: block;
-  padding: 0.4rem;
-}
-
-#btn-menu {
-  display: none;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  #menu {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 70px;
-    right: 0px;
-    background: #333;
-    transition: 0.6s;
-    z-index: 1000;
-    height: 0px;
-    visibility: hidden; /* para fazer o menu ficar invisível*/
-    overflow-y: hidden; /*para colocar um scroll quando o menu for maior que a tela*/
-  }
-  #nav.active #menu {
-    width: 150px;
-    height: calc(45vh - 70px);
-    border-radius: 5px;
-    box-shadow: rgb(71, 255, 240) -8px 8px 8px;
-    visibility: visible;
-    overflow-y: auto;
-  }
-  #menu a {
-    padding: 1rem 0;
-    margin: 0 1rem;
-  }
-  #btn-menu {
-    display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    color: #fcfdfb;
-    cursor: pointer;
-    gap: 0.5rem;
-  }
-  #hamburger {
-    border-top: 2px solid;
-    width: 20px;
-  }
-  #hamburger::after,
-  #hamburger::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-  }
-  #nav.active #hamburger {
-    border-top-color: transparent;
-  }
-  #nav.active #hamburger::before {
-    transform: rotate(135deg);
-  }
-  #nav.active #hamburger::after {
-    transform: rotate(-135deg);
-    top: -7px;
-  }
-
-  .sidebar {
-    width: 90vw;
-    text-align: center;
-  }
-
-
-}
 
 /* Sidebar */
 
@@ -155,26 +29,22 @@ a:hover {
   grid-area: s;
   color: #fcfdfb;
   text-align: center;
-  padding: 25px auto;
-  justify-content: center;
-  padding-left: 25px;
-  padding-top: 45px;
-  padding-bottom: 25px;
+  padding: 25px;
+  margin: 25px auto;
 }
 
 .contatos {
   height: 90%;
   width: 90%;
-  border: 1px solid #444;
   background: #444;
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
   box-shadow: -3px 8px 8px 8px #8905f5;
 }
 
 #foto {
-  width: 60%;
-  margin: 10px;
+  width: 90%;
+  margin-top: -50px;
   border-radius: 10px;
   align-items: center;
 }
@@ -362,3 +232,132 @@ img {
   width: 40px;
   padding: 5px;
 }
+
+  /* responsividade */
+
+  @media (max-width: 600px) {
+    .container {
+      display: block;
+    }
+  
+  
+    #foto {
+      width: 15px;
+      border-radius: 50px;
+    }
+  
+    .footer {
+      height: 80px;
+      padding-top: 15px;
+    }
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: Cambria, Cochin;
+  }
+  
+  a:hover {
+    background: #f78b8b;
+  }
+  
+  /* Header */
+  
+  .header {
+    display: flex;
+    background: #333;
+    color: #fcfdfb;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    grid-area: h;
+    border-bottom: 2px solid rgb(71, 255, 240);
+  }
+  
+  #menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0.4rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.4rem;
+  }
+  
+  #btn-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: #333;
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden; /* para fazer o menu ficar invisível*/
+      overflow-y: hidden; /*para colocar um scroll quando o menu for maior que a tela*/
+    }
+    #nav.active #menu {
+      width: 150px;
+      height: calc(45vh - 70px);
+      border-radius: 5px;
+      box-shadow: rgb(71, 255, 240) -8px 8px 8px;
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+    }
+    #btn-menu {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      color: #fcfdfb;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  
+    .sidebar {
+      width: 90vw;
+      text-align: center;
+    }
+  
+  
+  }
