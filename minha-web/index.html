@@ -1,125 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Portifólio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
-  <div class="container">
-
-    <section class="header">
-      <h1>Eudis alves</h1> 
-      <nav id="nav">
-          <button aria-label="Abrir Menu" 
-          id="btn-menu" 
-          aria-haspopup="true" 
-          aria-controls="menu" 
-          aria-expanded="false"><span id="hamburger"></span></button>
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <h1>Eudis alves</h1>
+        <nav id="nav">
+          <button
+            aria-label="Abrir Menu"
+            id="btn-menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburger"></span>
+          </button>
           <ul id="menu">
-              <li><a href="">Sobre</a></li>
-              <li><a href="https://github.com/EudisAlves">Github</a></li>
-              <li><a href="https://www.linkedin.com/in/eudis-alves-342744179">Linkedin</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="https://github.com/EudisAlves">Github</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/eudis-alves-342744179"
+                >Linkedin</a
+              >
+            </li>
           </ul>
-      </nav>
-    </section>
-  
-    <section class="sidebar">
-      <div class="contatos">
-        <img id="foto" src="./img/IMG_eudis.jpg" alt="">
-        
-        <h2>Contatos</h2>
-        <h4>Telefone:</h4>
-        <p>(21) 97457-3303</p>
-        <h4>E-mail:</h4>
-        <p>eudisalves.dev@gmail.com</p>
-        <h4>Local:</h4>
-        <p>São Gonçalo / RJ</p>
-      </div>
+        </nav>
+      </section>
 
-    </section>
-  
-    <section class="main">
-      <div  class="room">
-        <div class="slaide">
-          <h2>slaide</h2>
+      <section class="sidebar">
+        <div class="contatos">
+          <img id="foto" src="./img/IMG_eudis.jpg" alt="" />
+
+          <h2>Contatos</h2>
+          <h4>Telefone:</h4>
+          <p>(21) 97457-3303</p>
+          <h4>E-mail:</h4>
+          <p>eudisalves.dev@gmail.com</p>
+          <h4>Local:</h4>
+          <p>São Gonçalo / RJ</p>
         </div>
+      </section>
 
-        <div class="jg-memoria">
-          <h4>Jogo da memória</h4>
-          <div id="memoria">
-            <img id="imgs" src="./img/memoria.jpeg" alt="">
-            <p>
-              No jogo da memória apliquei mais conceitos básicos e avançados
-              em JavaScript, e um trabalho ainda maior em html 5 e css 3,
-              usando um trabalho ainda mair no visual e conceitos de logicas
-              de programação bem interessantes! Confira o código no meu Github
-              link no menu da pagina:
-            </p>
-            <a id="btn" href="https://eudisalves-jogo-da-memoria.netlify.app">jogar</a>
-          </div>
-        </div>
-        
-        <div >
+      <section class="main">
+        <div class="room">
+          <div class="slaider">
+            <div class="slaide-content">
+              <input type="radio" name="radio1" id="s1" />
+              <input type="radio" name="radio2" id="s2" />
+              <input type="radio" name="radio3" id="s3" />
+              <input type="radio" name="radio4" id="s4" />
 
-          <h4>Jogo da cobrinha</h4>
+              <div class="slaide-box primeiro">
+                <img src="./img/lightning-mcqueen.jpg" alt="" />
+              </div>
+              <div class="slaide-box">
+                <img src="./img/Sally Carrera.jpg" alt="" />
+              </div>
+              <div class="slaide-box">
+                <img src="./img/Tow Mater.jpg" alt="" />
+              </div>
+              <div class="slaide-box">
+                <img src="./img/doctor hudson.jpg" alt="" />
+              </div>
 
-          <div class="jg-cobrinha">
+              <div class="nav-auto">
+                <div class="auto-btn"></div>
+                <div class="auto-btn"></div>
+                <div class="auto-btn"></div>
+                <div class="auto-btn"></div>
+              </div>
 
-            <img id="imgs-2" src="./img/cobra.jpeg" alt="">
-
-            <p>O jogo foi criado com HTML 5, CSS 3 e JavasSript<br>
-              busquei aplicar vários conceitos como canvas e aplicação de estilos direto do JavaScript,
-              busquei deixar mais atrativo visualmente e responsivo para mobile, podendo-se
-              jogar por toque na tela ou teclado no computador.
-            </p>
-
-            <a id="btn" href="https://ea-gamesnake.netlify.app">jogar</a>
-
-          </div>
-        </div>
-
-        <div>
-          
-          <h4>Jogo da velha</h4>
-
-          <div class="jg-velha">
-            <img src="./img/Captura de Tela (2).png" alt="" id="imgs-3">
-
-            <P>
-              O jogo foi uma obra para estudos de eventos cliques
-              onde busquei aplicar conceitos básicos de
-              JavaScript com HTML5 e CSS 3.
-              Uma aplicação básica e simplificada da linguagem
-              JavaScript, o código completo está no meu github, link no menu!           
-            </P>
-
-            <a href="https://eudisalves-jogodavelha.netlify.app" id="btn">Jogar</a>
-
+              <div class="nav-manual">
+                <label for="s1" class="m-btn"></label>
+                <label for="s2" class="m-btn"></label>
+                <label for="s3" class="m-btn"></label>
+                <label for="s4" class="m-btn"></label>
+              </div>
+            </div>
           </div>
 
-        </div>
+          <div class="jg-memoria">
+            <h4>Jogo da memória</h4>
+            <div id="memoria">
+              <img id="imgs" src="./img/memoria.jpeg" alt="" />
+              <p>
+                No jogo da memória apliquei mais conceitos básicos e avançados
+                em JavaScript, e um trabalho ainda maior em html 5 e css 3,
+                usando um trabalho ainda mair no visual e conceitos de logicas
+                de programação bem interessantes! Confira o código no meu Github
+                link no menu da pagina:
+              </p>
+              <a id="btn" href="https://eudisalves-jogo-da-memoria.netlify.app"
+                >jogar</a
+              >
+            </div>
+          </div>
 
-        <div >
-          <h4>Pokedex</h4>
-          <div class="pokedex">
-            <h6>teste</h6>
+          <div>
+            <h4>Jogo da cobrinha</h4>
+
+            <div class="jg-cobrinha">
+              <img id="imgs-2" src="./img/cobra.jpeg" alt="" />
+
+              <p>
+                O jogo foi criado com HTML 5, CSS 3 e JavasSript<br />
+                busquei aplicar vários conceitos como canvas e aplicação de
+                estilos direto do JavaScript, busquei deixar mais atrativo
+                visualmente e responsivo para mobile, podendo-se jogar por toque
+                na tela ou teclado no computador.
+              </p>
+
+              <a id="btn" href="https://ea-gamesnake.netlify.app">jogar</a>
+            </div>
+          </div>
+
+          <div>
+            <h4>Jogo da velha</h4>
+
+            <div class="jg-velha">
+              <img src="./img/Captura de Tela (2).png" alt="" id="imgs-3" />
+
+              <p>
+                O jogo foi uma obra para estudos de eventos cliques onde busquei
+                aplicar conceitos básicos de JavaScript com HTML5 e CSS 3. Uma
+                aplicação básica e simplificada da linguagem JavaScript, o
+                código completo está no meu github, link no menu!
+              </p>
+
+              <a href="https://eudisalves-jogodavelha.netlify.app" id="btn"
+                >Jogar</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4>Pokedex</h4>
+            <div class="pokedex">
+              <h6>teste</h6>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  
-    <section class="footer">
-      <img src="./img/klipartz.com.png" alt="">
-      <img id="g" src="./img/git.png" alt="">
-      <img id="g" src="./img/github.png" alt="">
-      <img id="g" src="./img/nodejs.png" alt="">
-      <img id="g" src="./img/react.png" alt="">
-    </section> 
-    
-  </div>
-</body>
+      </section>
+
+      <section class="footer">
+        <img src="./img/klipartz.com.png" alt="" />
+        <img id="g" src="./img/git.png" alt="" />
+        <img id="g" src="./img/github.png" alt="" />
+        <img id="g" src="./img/nodejs.png" alt="" />
+        <img id="g" src="./img/react.png" alt="" />
+      </section>
+    </div>
+  </body>
 </html>
