@@ -137,7 +137,7 @@ body {
 }
 
 .slaide-box img {
-  width: 400px;
+  width: 450px;
   height: 200px;
 }
 
@@ -159,7 +159,7 @@ body {
   border: 1px solid #15c5fa;
   background: #f0ebeb;
   border-radius: 50%;
-  padding: 3px;
+  padding: 5px;
   cursor: pointer;
 }
 .nav-manual .m-btn:not(:last-child) {
