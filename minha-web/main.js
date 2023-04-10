@@ -42,6 +42,9 @@ function showSlide(index) {
   slides[index].style.display = "block";
 }
 
+setInterval(() => {
+  proximaImg()
+}, 2000)
 function prevSlide() {
   slideIndex--;
   showSlide(slideIndex);
@@ -54,7 +57,6 @@ function nextSlide() {
 
 // Inicializa o slider com o primeiro slide
 showSlide(slideIndex);
-
 
 
 btnMenu.addEventListener('click', toggleMenu);
