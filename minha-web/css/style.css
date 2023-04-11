@@ -8,6 +8,7 @@
 body {
   background: #333;
   padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -117,31 +118,12 @@ body {
   align-items: center;
 }
 
-.slaider {
-  grid-area: s;
-  margin: 0 auto;
-  padding: 0 !important;
-  width: 450px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.slaide-content {
-  display: flex;
-  width: 400%;
-  align-items: center;
-}
-
-.slaide-content input {
-  display: none;
-}
-
 .slider {
+  grid-area: s;
   position: relative;
   width: 100%;
   max-width: 400px; /* Define o tamanho máximo do slider */
   margin: 0 auto; /* Centraliza o slider */
-  overflow: hidden;
 }
 
 .slides {
@@ -323,7 +305,7 @@ img {
 
 @media (max-width: 600px) {
   #menu a {
-    color: rgb(255, 255, 255);
+    color: rgb(133, 155, 146);
     text-decoration: none;
     font-family: Cambria, Cochin;
   }
@@ -336,18 +318,18 @@ img {
     display: block;
     position: absolute;
     width: 100%;
-    top: 70px;
-    right: 0px;
+    top: 42px;
+    right: 10px;
     background: #333;
-    transition: 0.6s;
+    transition: 0.8s;
     z-index: 1000;
-    height: 0px;
     visibility: hidden; /* para fazer o menu ficar invisível*/
     overflow-y: hidden; /*para colocar um scroll quando o menu for maior que a tela*/
   }
   #nav.active #menu {
-    width: 150px;
-    height: calc(45vh - 70px);
+    width: 105px;
+    right: -7px;
+    height: calc(30vh - 70px);
     border-radius: 5px;
     box-shadow: rgb(71, 255, 240) -8px 8px 8px;
     visibility: visible;
@@ -402,6 +384,8 @@ img {
     width: 90vw;
     text-align: center;
     margin: 30px;
+    margin-top: 50px;
+
   }
 
 
@@ -449,10 +433,7 @@ img {
     padding: 2px;
   }
 
-  .slider {
-    margin: 15px auto;
-  }
-
+  
 
   #memoria {
     height: 150px;

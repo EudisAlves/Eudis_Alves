@@ -13,6 +13,9 @@ function toggleMenu(event) {
   }
 }
 
+
+// slider
+
 let slideIndex = 0;
 
 function showSlide(index) {
@@ -42,9 +45,7 @@ function showSlide(index) {
   slides[index].style.display = "block";
 }
 
-setInterval(() => {
-  proximaImg()
-}, 2000)
+
 function prevSlide() {
   slideIndex--;
   showSlide(slideIndex);
@@ -52,11 +53,26 @@ function prevSlide() {
 
 function nextSlide() {
   slideIndex++;
+  const slides = document.getElementsByClassName("slide");
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
   showSlide(slideIndex);
 }
 
+function startAutoPlay() {
+  // Define um intervalo de 3 segundos para trocar automaticamente as imagens
+  setInterval(function() {
+    nextSlide();
+  }, 3000);
+}
+
+
 // Inicializa o slider com o primeiro slide
 showSlide(slideIndex);
+
+// Inicia a troca automática de imagens
+startAutoPlay();
 
 
 btnMenu.addEventListener('click', toggleMenu);
