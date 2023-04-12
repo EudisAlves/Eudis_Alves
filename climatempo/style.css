@@ -17,21 +17,23 @@ body {
 .caixa-principal {
     width: 90%;
     max-width: 450px;
-    background: #000000;
-    opacity: 0.7;
+    background: #00000086;
     border-radius: 20px;
-    padding: 20px;
-    color: antiquewhite;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #000000;
 }
 
 .caixa-principal input {
-    width: 300px;
-    border: none;
+    width: 230px;
+    border: 1px solid #302f2f;
     outline: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: #7a7a7a7b;
+    background: #3f3f3f;
     color: #ffffff;
+    margin-left: -10%;
+    margin-top: 20px;
 }
 
 .caixa-2 {
@@ -46,6 +48,8 @@ body {
     padding: 5px;
     border: 1px solid #302f2f;
     border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 .img-buscar {
@@ -59,6 +63,14 @@ body {
 
 .caixa-3 hr {
     margin: 10px;  
+    width: 100%;
+}
+
+.caixa-4 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
 }
 
 .cidade {
@@ -74,4 +86,10 @@ body {
 
 .temp {
     margin-top: 30px;
+    margin-left: 3%;
+}
+
+.umidade {
+    margin-top: 30px;
+    margin-left: 3%;
 }
