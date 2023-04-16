@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, sans-serif;
+    font-family: sans-serif;
 }
 
 body {
@@ -23,17 +23,17 @@ h1 {
 .caixa-principal {
     width: 90%;
     max-width: 450px;
-    background: #0000007a ;
+    background: #00000098 ;
     border-radius: 20px;
     padding: 10px;
     color: rgb(255, 255, 255);
     border: 1px solid #000000;
-    box-shadow: 0 0 50px #000000;
+    box-shadow: 0 0 28px #000000;
 }
 
 .caixa-principal input {
     width: 230px;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     outline: none;
     padding: 10px;
     border-radius: 5px;
