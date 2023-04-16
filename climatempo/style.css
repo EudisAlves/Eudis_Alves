@@ -14,15 +14,21 @@ body {
     background-image: url("https://source.unsplash.com/1600x900/?landscape");
 }
 
+h1 {
+    text-align: center;
+    font-family: fantasy;
+    font-weight: 300;
+}
+
 .caixa-principal {
     width: 90%;
     max-width: 450px;
-    background: #00000096 ;
+    background: #0000007a ;
     border-radius: 20px;
     padding: 10px;
     color: rgb(255, 255, 255);
-    border: 2px solid #000000;
-    box-shadow: 0 0 28px #000000;
+    border: 1px solid #000000;
+    box-shadow: 0 0 50px #000000;
 }
 
 .caixa-principal input {
@@ -31,7 +37,7 @@ body {
     outline: none;
     padding: 10px;
     border-radius: 5px;
-    background: #3f3f3f;
+    background: #252525a1;
     color: #ffffff;
     margin-left: -10%;
     margin-top: 20px;
@@ -94,4 +100,32 @@ body {
 .umidade {
     margin-top: 30px;
     margin-left: 3%;
+}
+
+@media (min-width: 250px) {
+
+    .caixa-principal {
+        padding: 15px 
+    }
+
+    .caixa-2 {
+        padding: 30px;
+        font-size: 9px;
+    }
+    
+    .input-cidade {
+        width: 250px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .cidade {
+        font-size: 18px;
+    }
+
+    .btn {
+        margin: 5px;
+        margin-top: 10%;
+        margin-right: -7%;
+    }
 }
