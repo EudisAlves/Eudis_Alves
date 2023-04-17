@@ -274,12 +274,20 @@ p {
   height: 103px;
 }
 
-.pokedex {
+.clima {
   grid-area: p;
-  background: #a2a7a1;
+  display: flex;
   height: 120px;
   border: 1px solid #15c5fa;
   border-radius: 0px 50px 50px 0px;
+  gap: 5px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-clima {
+  height: 103px;
 }
 
 /* Footer */
@@ -378,6 +386,7 @@ img {
   /* Main */
   .container {
     display: block;
+    
   }
 
   .sidebar {
@@ -424,12 +433,13 @@ img {
   .room {
     display: block;
     align-items: center;
-    padding: 0;
+    padding: 5px;
     margin: 0;
   }
 
   p {
     font-size: 10px;
+    font-weight: 300;
     padding: 2px;
   }
 
@@ -464,7 +474,7 @@ img {
     margin: 10px;
   }
 
-  .pokedex {
+  .clima {
     height: 150px;
     margin: 10px;
   }
