@@ -6,8 +6,13 @@
     color: aliceblue;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 .main {
-    background: linear-gradient(180deg, #000000 1%, #cac9c9 100%);
+    background: linear-gradient(360deg, #000000 70%, #003cff 100%);
     margin-top: -15px;
     margin-bottom: 2px solid #000000;
 }
@@ -28,7 +33,7 @@
     margin-top: 5%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
-    color: #f1f1f183;
+    color: #fffefecc;
 }
 .main img {
     width: 400px;
@@ -41,9 +46,62 @@
 
 
 .form {
-    height: 600px;
-    background-image: url(../img/bg-sobre-form.jpg);
+    height: 900px;
+    background-image: url(../img/bg-form-3.jpg);
     background-size: cover;
     text-align: center;
     padding: 40px;
+}
+
+.form h2 {
+    margin: 90px;
+    color: rgb(255, 255, 255);
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.skill h3 {
+    font-size: 25px;
+    color: rgb(255, 166, 0);
+}
+
+
+.skill li {
+    margin: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    background: #444;
+    border-radius: 15px;
+    box-shadow: 0 0 18px ;
+    padding: 5px;
+}
+
+.skill-2 {
+    display: flex;
+    align-items: center;
+    margin-left: 56%;
+    margin-top: -33%;
+}
+
+.skill-2 h3 {
+    font-size: 25px;
+    color: rgb(255, 166, 0); 
+}
+
+.skill-2 li {
+    width: 250px;
+    margin: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    background: #444;
+    border-radius: 15px;
+    box-shadow: 0 0 18px ;
+    padding: 5px;
 }
