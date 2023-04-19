@@ -1,107 +1,201 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: helvetica, sans-serif;
-    color: aliceblue;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  color: aliceblue;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main {
-    background: linear-gradient(360deg, #000000 70%, #003cff 100%);
-    margin-top: -15px;
-    margin-bottom: 2px solid #000000;
+  background: linear-gradient(360deg, #000000 70%, #003cff 100%);
+  margin-top: -15px;
+  margin-bottom: 2px solid #000000;
 }
 
 .main h1 {
-    font-size: 45px;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-    padding: 55px;
-    margin-left: 130px;
+  font-size: 45px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  padding: 55px;
+  margin-left: 130px;
 }
 
 .main-text {
-    display: flex;
+ display: flex;
 }
 .main-text p {
-    margin: 25px;
-    margin-top: 5%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-    color: #fffefecc;
+  margin: 25px;
+  margin-top: 5%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  color: #fffefecc;
 }
 .main img {
-    width: 400px;
-    height: 550px;
-    margin-bottom: 30px;
-    margin-top: -11%;
-    border-radius: 0 0 0 10px;
-    box-shadow: 0 0 28px #000000;
+  width: 400px;
+  height: 550px;
+  margin-bottom: 30px;
+  margin-top: -11%;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 0 28px #000000;
 }
 
-
 .form {
-    height: 900px;
-    background-image: url(../img/bg-form-3.jpg);
-    background-size: cover;
-    text-align: center;
-    padding: 40px;
+  height: 900px;
+  background-image: url(../img/bg-form-3.jpg);
+  background-size: cover;
+  text-align: center;
+  padding: 40px;
 }
 
 .form h2 {
-    margin: 90px;
-    color: rgb(255, 255, 255);
+  margin: 90px;
+  color: rgb(255, 255, 255);
+}
+
+.form a {
+  font-size: large;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  background: #000000af;
+  padding: 10px;
+  margin-top: 60px;
+  box-shadow: 0 0 19px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.form a:hover {
+  background: #003cffaf;
+  border: 2px solid #444444;
 }
 
 .skill {
-    display: flex;
-    align-items: center;
-    margin-left: 10%;
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
 }
 
 .skill h3 {
-    font-size: 25px;
-    color: rgb(255, 166, 0);
+  font-size: 25px;
+  color: rgb(255, 166, 0);
 }
 
-
 .skill li {
-    margin: 50px;
-    font-size: 25px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    background: #444;
-    border-radius: 15px;
-    box-shadow: 0 0 18px ;
-    padding: 5px;
+  margin: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background: #444;
+  border-radius: 15px;
+  box-shadow: 0 0 18px;
+  padding: 5px;
 }
 
 .skill-2 {
-    display: flex;
-    align-items: center;
-    margin-left: 56%;
-    margin-top: -33%;
+  display: flex;
+  align-items: center;
+  margin-left: 56%;
+  margin-top: -33%;
+  margin-bottom: 40px;
 }
 
 .skill-2 h3 {
-    font-size: 25px;
-    color: rgb(255, 166, 0); 
+  font-size: 25px;
+  color: rgb(255, 166, 0);
 }
 
 .skill-2 li {
-    width: 250px;
-    margin: 50px;
-    font-size: 25px;
-    font-weight: 700;
-    list-style: none;
-    color: rgb(255, 255, 255);
-    background: #444;
-    border-radius: 15px;
-    box-shadow: 0 0 18px ;
+  width: 250px;
+  margin: 50px;
+  font-size: 25px;
+  font-weight: 700;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  background: #444;
+  border-radius: 15px;
+  box-shadow: 0 0 18px;
+  padding: 5px;
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 25px;
+  }
+  .main h1 {
+    width: 400px;
+    font-size: 40px;
+    margin-left: 10px;
+  }
+
+  .form {
+    display: block;
+    height: 1300px;
     padding: 5px;
+  }
+
+  .form h2 {
+    font-size: 25px;
+    width: 450px;
+    margin-left: -23px;
+  }
+
+  .form a {
+    margin-left: -22px;
+  }
+
+  .main-text {
+    display: block;
+    padding: 15px;
+  }
+
+  .main img {
+    width: 350px;
+    margin-top: 15px;
+  }
+
+  .skill {
+    display: block;
+    padding: 5px;
+    top: 15px;
+    text-decoration: none;
+  }
+  
+  .skill li {
+    font-size: 15px;
+    width: 90px;
+    margin-left: 90px;
+    list-style: none;
+  }
+
+  .skill h3 {
+    font-size: 20px;
+    width: 450px;
+    margin-left: -70px;
+  }
+
+  .skill-2 {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    margin-left: 90px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .skill-2 h3 {
+    font-size: 20px;
+    width: 450px;
+    margin-left: -150px;
+  }
+  
+  .skill-2 li {
+    font-size: 15px;
+    width: 90px;
+    margin-left: 35px;
+  }
 }
