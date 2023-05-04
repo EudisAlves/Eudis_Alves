@@ -10,7 +10,7 @@ body {
     justify-content: center;
     background: radial-gradient(circle, 
     rgb(252, 102, 3) 0%, 
-    rgb(0, 0, 0) 50%);
+    rgb(0, 0, 0) 60%);
     color: aliceblue;
     width: 100vw;
     height: 100vh;
@@ -52,4 +52,9 @@ h1 {
     font-size: larger;
     background-color: rgb(187, 199, 202);
     box-shadow: 3px 3px 3px;
+}
+
+#version {
+    margin-top: 140px;
+    margin-left: 20px;
 }

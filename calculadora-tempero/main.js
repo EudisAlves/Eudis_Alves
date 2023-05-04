@@ -19,6 +19,24 @@ function calcularTempero(pesoCarne, tipoCarne, tipoTempero) {
       } else if (tipoTempero === 'óleo') {
         quantidadeTempero = (pesoCarne * 0.004).toFixed(0)
       }
+    } else if (tipoCarne === 'coração') {
+      if (tipoTempero === 'sal') {
+        quantidadeTempero = (pesoCarne * 0.035).toFixed(0); 
+      } else if (tipoTempero === 'alho') {
+        quantidadeTempero = (pesoCarne * 0.015).toFixed(0); 
+      }
+    } else if (tipoCarne === 'carne-suina') {
+      if (tipoTempero === 'sal') {
+        quantidadeTempero = (pesoCarne * 0.035).toFixed(0); // 
+      } else if (tipoTempero === 'limão') {
+        quantidadeTempero = (pesoCarne * 0.02).toFixed(0); // 
+      } else if (tipoTempero === 'alho') {
+        quantidadeTempero = (pesoCarne * 0.020).toFixed(0); // 
+      } else if (tipoTempero === 'louro') {
+        quantidadeTempero = (pesoCarne * 0.003).toFixed(0)
+      } else if (tipoTempero === 'coloral') {
+        quantidadeTempero = (pesoCarne * 0.008).toFixed(0)
+      }
     }
     return quantidadeTempero;
     }
