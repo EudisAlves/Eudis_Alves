@@ -15,13 +15,14 @@ body h1 {
 }
 
 body ul {
-    margin-left: 50px;
-    font-size: 23px;
+    width: 300px;
+    margin-left: 35px;
+    font-size: 20px;
     color: rgb(240, 235, 243);
 }
 
 body li {
-    margin: 10px;  
+    margin: 5px;  
 }
 
 .input-valor{
