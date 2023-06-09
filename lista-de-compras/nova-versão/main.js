@@ -1,51 +1,90 @@
 function adicionarItem() {
     var produto = document.getElementById('produto').value;
-    var preco = document.getElementById('preco').value;
+    var quantidade = parseFloat(document.getElementById('input-quantidade-item').value);
+    var preco = parseFloat(document.getElementById('input-valor').value.replace(",", "."));
 
-    // Verificar se o produto e o preço foram preenchidos
-    if (produto !== '' && preco !== '') {
+    if (!isNaN(quantidade) && !isNaN(valor)) {
+        var subtotal = quantidade * valor;
+        calcularTotal(subtotal);
+    }
+
+    // Verificar se o produto, quantidade e preço foram preenchidos corretamente
+    if (produto !== '' && !isNaN(quantidade) && !isNaN(preco)) {
         // Criar o elemento de lista
         var li = document.createElement('li');
 
-        // Adicionar o produto e o preço fixo
-        li.innerHTML = produto + ' - R$ ' + preco;
+        // Criar os elementos para quantidade e preço
+        var quantidadeSpan = document.createElement('span');
+        quantidadeSpan.className = 'quantidade-item';
+        quantidadeSpan.textContent = quantidade;
+
+        var precoSpan = document.createElement('span');
+        precoSpan.className = 'preco-item';
+        precoSpan.textContent = preco.toFixed(2);
+
+        // Adicionar o produto, quantidade e preço
+        li.textContent = produto + ' - Quantidade: ';
+        li.appendChild(quantidadeSpan);
+        li.textContent += ' - Valor: R$ ';
+        li.appendChild(precoSpan);
 
         // Adicionar o item à lista de compras
         document.getElementById('lista-compras').appendChild(li);
 
         // Limpar os campos de entrada
         document.getElementById('produto').value = '';
-        document.getElementById('preco').value = '';
+        document.getElementById('input-quantidade-item').value = '';
+        document.getElementById('input-valor').value = '';
+
+        // Recalcular o total
+        calcularTotal();
     }
 }
 
 function calcularTotal() {
-    var itens = document.getElementById('lista-compras').getElementsByTagName('li');
     var totalCentavos = 0;
 
-    for (var i = 0; i < itens.length; i++) {
-        var quantidade = parseFloat(itens[i].querySelector('.input-quantidade-item').value);
-        var preco = parseFloat(itens[i].querySelector('.input-valor-item').value.replace(",", "."));
+    // Obter os inputs da lista de compras
+    var inputsQuantidade = document.querySelectorAll('#lista-compras .input-quantidade-item');
+    var inputsValor = document.querySelectorAll('#lista-compras .input-valor');
 
-        if (!isNaN(quantidade) && !isNaN(preco)) {
-            var precoCentavos = Math.round(preco * 100); // Converter o preço para centavos
-            totalCentavos += quantidade * precoCentavos;
+    // Iterar sobre os inputs da lista de compras
+    for (var i = 0; i < inputsQuantidade.length; i++) {
+        var quantidade = parseFloat(inputsQuantidade[i].value);
+        var valor = parseFloat(inputsValor[i].value.replace(",", "."));
+
+        if (!isNaN(quantidade) && !isNaN(valor)) {
+            var subtotalCentavos = Math.round(quantidade * valor * 100); // Calcular o subtotal em centavos
+            totalCentavos += subtotalCentavos;
         }
     }
 
-    var quantidadeAdd = parseFloat(document.getElementById('add-produto').querySelector('.input-quantidade').value);
-    var precoAdd = parseFloat(document.getElementById('add-produto').querySelector('#preco').value.replace(",", "."));
+    // Obter os inputs adicionados manualmente
+    var quantidadeAdicionada = parseFloat(document.getElementById('input-quantidade-item').value);
+    var valorAdicionado = parseFloat(document.getElementById('input-valor').value.replace(",", "."));
 
-    if (!isNaN(quantidadeAdd) && !isNaN(precoAdd)) {
-        var precoAddCentavos = Math.round(precoAdd * 100); // Converter o preço para centavos
-        totalCentavos += quantidadeAdd * precoAddCentavos;
+    if (!isNaN(quantidadeAdicionada) && !isNaN(valorAdicionado)) {
+        var subtotalAdicionadoCentavos = Math.round(quantidadeAdicionada * valorAdicionado * 100); // Calcular o subtotal dos itens adicionados manualmente em centavos
+        totalCentavos += subtotalAdicionadoCentavos;
     }
 
-    // Converter o total de centavos para reais
-    var reais = Math.floor(totalCentavos / 100);
-    var centavos = totalCentavos % 100;
+    // Converter o total para reais formatados
+    var totalReais = (totalCentavos / 100).toFixed(2);
 
-    var totalFormatado = "R$ " + reais + "," + centavos.toString().padStart(2, "0");
-
-    document.getElementById("total").innerHTML = "Total: " + totalFormatado;
+    // Exibir o total
+    var totalElement = document.getElementById('total');
+    if (totalElement) {
+        totalElement.innerText = 'Total: R$ ' + totalReais;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+

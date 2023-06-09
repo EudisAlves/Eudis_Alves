@@ -96,13 +96,17 @@
             <input type="text" class="input-valor" placeholder="Digite um valor">
         </li>
     </ul>
+    
     <div id="add-produto">
         <input type="text" id="produto" placeholder="Digite o produto">
-        <input type="number" class="input-quantidade" placeholder="Quantidade">
-        <input type="number" id="preco" placeholder="Digite o preço">
+        <input type="number" id="input-quantidade-item" class="input-quantidade-item" placeholder="Quantidade">
+        <input type="number" id="input-valor" class="input-valor" placeholder="Digite o preço">
     </div>
 
-    <button onclick="calcularTotal(); adicionarItem();">Calcular</button>
+    <button onclick="calcularTotal(), adicionarItem()">Calcular</button>
     <h3>Total: <span id="total">R$ 0.00</span></h3>
+
+    <ul id="lista-compras"></ul>
+       
 </body>
 </html>
