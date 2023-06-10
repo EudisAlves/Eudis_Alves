@@ -24,6 +24,7 @@ body ul {
     width: 380px;
     margin-left: 20px;
     font-size: 20px;
+    font-family: 'Dancing Script', cursive;
     color: rgb(255, 255, 255);
 }
 
@@ -46,6 +47,12 @@ body li input {
     margin: 10px;
     border: 1px solid black;
     border-radius: 8px;
+}
+
+
+#add-produto h4 {
+    color: #fdfdfd;
+    margin: 10px;
 }
 
 button {
