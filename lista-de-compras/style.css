@@ -11,7 +11,7 @@ body {
 body h1 {
     margin: 25px;
     text-align: center;
-    color: rgb(138, 43, 226);
+    color: rgb(138, 43, c 226);
 }
 
 body ul {
@@ -22,11 +22,11 @@ body ul {
 }
 
 body li {
-    margin: 5px;  
+    margin-left: 5px;  
 }
 
 .input-valor{
-    margin-left: 205px;
+    margin-left: 5px;
     width: 100px;
     height: 36px;
     border: 1px solid black;

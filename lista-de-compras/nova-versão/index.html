@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <title>Lista de Compras</title>
 </head>
@@ -17,94 +20,95 @@
 
         <li>Arroz
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder= "valor">
         </li>
         <li>Feijão
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Macarrão
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Farianha de trigo
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Café
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Açucar
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Óleo
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Ovo
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Flocão
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Alho
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Cebola
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Fermento
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" plac valor">
         </li>
         <li>Leite
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Molho de tomate
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Água sanitaria
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Detergente
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Desinfetante
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Sabonete
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Papel higiênico
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
         <li>Sabão em pó
             <input type="number" class="input-quantidade-item" placeholder="Quantidade">
-            <input type="text" class="input-valor" placeholder="Digite um valor">
+            <input type="text" class="input-valor" placeholder=" valor">
         </li>
     </ul>
     
     <div id="add-produto">
-        <input type="text" id="produto" placeholder="Digite o produto">
+        <h4>Adicionar produtos</h4>
+        <input type="text" id="produto" placeholder="Produto">
         <input type="number" id="input-quantidade-item" class="input-quantidade-item" placeholder="Quantidade">
-        <input type="number" id="input-valor" class="input-valor" placeholder="Digite o preço">
+        <input type="number" id="input-valor" class="input-valor" placeholder="Valor">
     </div>
-
+    <div id="resultado"></div>
     <button onclick="calcularTotal(), adicionarItem()">Calcular</button>
-    <h3>Total: <span id="total">R$ 0.00</span></h3>
+    <h3><span id="total">R$ 0.00</span></h3>
 
     <ul id="lista-compras"></ul>
        
