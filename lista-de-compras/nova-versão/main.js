@@ -3,13 +3,7 @@ function adicionarItem() {
     var quantidade = parseFloat(document.getElementById('input-quantidade-item').value);
     var preco = parseFloat(document.getElementById('input-valor').value.replace(",", "."));
 
-    if (!isNaN(quantidade) && !isNaN(valor)) {
-        var subtotal = quantidade * valor;
-        calcularTotal(subtotal);
-    }
-
-    // Verificar se o produto, quantidade e preço foram preenchidos corretamente
-    if (produto !== '' && !isNaN(quantidade) && !isNaN(preco)) {
+    if (!isNaN(quantidade) && !isNaN(preco) && produto !== '') {
         // Criar o elemento de lista
         var li = document.createElement('li');
 
@@ -36,8 +30,8 @@ function adicionarItem() {
         document.getElementById('input-quantidade-item').value = '';
         document.getElementById('input-valor').value = '';
 
-        // Recalcular o total
-        calcularTotal();
+        // Atualizar o total
+        atualizarTotal();
     }
 }
 
