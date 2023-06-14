@@ -1,4 +1,4 @@
-function calcularTempero(pesoCarne, tipoCarne) {
+function calcularTempero(pesoCarne, tipoCarne) { // ele vai calcular a carne pelo peso para saber o quanto de cada tempero
   const temperos = {
     frango: {
       'pó da alegria': pesoCarne * 0.035,
@@ -7,7 +7,6 @@ function calcularTempero(pesoCarne, tipoCarne) {
     },
     'carne-bovina': {
       'pó da alegria': pesoCarne * 0.06,
-      pimenta: pesoCarne * 0.02,
       alho: pesoCarne * 0.025,
       óleo: pesoCarne * 0.004
     },
@@ -24,7 +23,7 @@ function calcularTempero(pesoCarne, tipoCarne) {
     }
   };
 
-  return temperos[tipoCarne];
+  return temperos[tipoCarne]; // return vai gerar um array com todas as informações 
 }
 
 function exibirResultados() {
