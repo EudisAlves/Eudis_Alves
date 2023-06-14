@@ -12,6 +12,7 @@ body {
     background-image: url(./img/pexels-bob-clark-21490.jpg);
     background-position: center;
     background-size: cover;
+
     color: aliceblue;
     width: 100vw;
     height: 100vh;
@@ -22,8 +23,9 @@ body {
 h1 {
     text-align: center;
     margin: 50px;
-    padding: 10px;
+    padding: 20px;
     border: 2px solid rgb(4, 253, 4);
+    border-radius: 15px;
     font-size: 20px;
 }
 
@@ -43,21 +45,11 @@ h1 {
     margin: 40px;
     height: 50px;
     border: 1px solid rgb(1, 63, 16);
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: larger;
     background: #fffcfc9c;
     color: rgb(0, 0, 0);
     margin-right: -20px;
-}
-
-#tipo-tempero {
-    width: 200px;
-    height: 50px;
-    border: 1px solid rgb(1, 68, 18);
-    border-radius: 15px;
-    font-size: larger;
-    background: #fcfcfc9c;
-    color: rgb(0, 0, 0);
 }
 
 #btn {
@@ -74,6 +66,7 @@ h1 {
 #btn-comp {
     font-size: larger;
     padding: 10px;
+    margin: 30px;
     border-radius: 5px;
     color: rgb(13, 14, 13);
     background: rgb(235, 102, 102);
@@ -82,13 +75,16 @@ h1 {
 #resultado {
     padding: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(8, 8, 8);
+    color: rgb(255, 253, 253);
     font-size: 28px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #version {
-    margin-top: 140px;
+    margin-top: 20px;
     margin-left: -200px;
-    color: red;
+    color: rgb(10, 0, 0);
     font-weight: 300;
 }

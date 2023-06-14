@@ -1,22 +1,22 @@
 function calcularTempero(pesoCarne, tipoCarne) {
   const temperos = {
     frango: {
-      sal: pesoCarne * 0.035,
+      'pó da alegria': pesoCarne * 0.035,
       coloral: pesoCarne * 0.008,
       alho: pesoCarne * 0.015
     },
     'carne-bovina': {
-      sal: pesoCarne * 0.06,
+      'pó da alegria': pesoCarne * 0.06,
       pimenta: pesoCarne * 0.02,
       alho: pesoCarne * 0.025,
       óleo: pesoCarne * 0.004
     },
     coração: {
-      sal: pesoCarne * 0.035,
+      'pó da alegria': pesoCarne * 0.035,
       alho: pesoCarne * 0.015
     },
     'carne-suina': {
-      sal: pesoCarne * 0.035,
+      'pó da alegria': pesoCarne * 0.035,
       limão: pesoCarne * 0.02,
       alho: pesoCarne * 0.02,
       louro: pesoCarne * 0.003,
@@ -40,11 +40,27 @@ function exibirResultados() {
   }
 
   // Exiba os resultados para o usuário
-  document.getElementById('resultado').innerHTML = `<ul>${listaTemperos}</ul>`;
+  const resultadoFinal = `<p>Resultados para ${pesoCarne} gramas de ${tipoCarne}:</p><ul>${listaTemperos}</ul>`;
+  document.getElementById('resultado').innerHTML = resultadoFinal;
 
   // Atualize a função de compartilhamento
   document.getElementById('btn-compartilhar').addEventListener('click', function() {
     const resultadoCompartilhado = `Você precisa dos seguintes temperos para ${pesoCarne} gramas de ${tipoCarne}:\n\n${listaTemperos}`;
     navigator.share({ text: resultadoCompartilhado });
   });
+}
+
+function compartilharTemperos() {
+  const quantidadeTempero = document.getElementById('resultado').innerText;
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'Compartilhar Temperos',
+      text: `Você precisa de ${quantidadeTempero} gramas de tempero.`,
+    })
+      .then(() => console.log('Conteúdo compartilhado com sucesso.'))
+      .catch((error) => console.log('Erro ao compartilhar conteúdo:', error));
+  } else {
+    alert('Compartilhamento não suportado neste dispositivo.');
+  }
 }
