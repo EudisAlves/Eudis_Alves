@@ -1,54 +1,50 @@
-function calcularTempero(pesoCarne, tipoCarne, tipoTempero) {
-    let quantidadeTempero = 0;
-    
-    if (tipoCarne === 'frango') {
-      if (tipoTempero === 'sal') {
-        quantidadeTempero = (pesoCarne * 0.035).toFixed(0); 
-      } else if (tipoTempero === 'coloral') {
-        quantidadeTempero = (pesoCarne * 0.008).toFixed(0); 
-      } else if (tipoTempero === 'alho') {
-        quantidadeTempero = (pesoCarne * 0.015).toFixed(0); 
-      }
-    } else if (tipoCarne === 'carne-bovina') {
-      if (tipoTempero === 'sal') {
-        quantidadeTempero = (pesoCarne * 0.06).toFixed(0); // 
-      } else if (tipoTempero === 'pimenta') {
-        quantidadeTempero = (pesoCarne * 0.02).toFixed(0); // 
-      } else if (tipoTempero === 'alho') {
-        quantidadeTempero = (pesoCarne * 0.025).toFixed(0); // 
-      } else if (tipoTempero === 'óleo') {
-        quantidadeTempero = (pesoCarne * 0.004).toFixed(0)
-      }
-    } else if (tipoCarne === 'coração') {
-      if (tipoTempero === 'sal') {
-        quantidadeTempero = (pesoCarne * 0.035).toFixed(0); 
-      } else if (tipoTempero === 'alho') {
-        quantidadeTempero = (pesoCarne * 0.015).toFixed(0); 
-      }
-    } else if (tipoCarne === 'carne-suina') {
-      if (tipoTempero === 'sal') {
-        quantidadeTempero = (pesoCarne * 0.035).toFixed(0); // 
-      } else if (tipoTempero === 'limão') {
-        quantidadeTempero = (pesoCarne * 0.02).toFixed(0); // 
-      } else if (tipoTempero === 'alho') {
-        quantidadeTempero = (pesoCarne * 0.020).toFixed(0); // 
-      } else if (tipoTempero === 'louro') {
-        quantidadeTempero = (pesoCarne * 0.003).toFixed(0)
-      } else if (tipoTempero === 'coloral') {
-        quantidadeTempero = (pesoCarne * 0.008).toFixed(0)
-      }
+function calcularTempero(pesoCarne, tipoCarne) {
+  const temperos = {
+    frango: {
+      sal: pesoCarne * 0.035,
+      coloral: pesoCarne * 0.008,
+      alho: pesoCarne * 0.015
+    },
+    'carne-bovina': {
+      sal: pesoCarne * 0.06,
+      pimenta: pesoCarne * 0.02,
+      alho: pesoCarne * 0.025,
+      óleo: pesoCarne * 0.004
+    },
+    coração: {
+      sal: pesoCarne * 0.035,
+      alho: pesoCarne * 0.015
+    },
+    'carne-suina': {
+      sal: pesoCarne * 0.035,
+      limão: pesoCarne * 0.02,
+      alho: pesoCarne * 0.02,
+      louro: pesoCarne * 0.003,
+      coloral: pesoCarne * 0.008
     }
-    return quantidadeTempero;
-    }
-  
+  };
 
-  function exibirResultados() {
-    const pesoCarne = Number(document.getElementById('peso-carne').value);
-    const tipoCarne = document.getElementById('tipo-carne').value;
-    const tipoTempero = document.getElementById('tipo-tempero').value;
-    
-    const quantidadeTempero = calcularTempero(pesoCarne, tipoCarne, tipoTempero);
-    
-    // Exiba os resultados para o usuário
-    document.getElementById('resultado').innerHTML = `Você precisa de ${quantidadeTempero} gramas para ${pesoCarne} gramas de ${tipoCarne}.`;
-    };
+  return temperos[tipoCarne];
+}
+
+function exibirResultados() {
+  const pesoCarne = Number(document.getElementById('peso-carne').value);
+  const tipoCarne = document.getElementById('tipo-carne').value;
+
+  const temperos = calcularTempero(pesoCarne, tipoCarne);
+  let listaTemperos = '';
+
+  for (let tempero in temperos) {
+    const quantidade = temperos[tempero].toFixed(0);
+    listaTemperos += `<li>${tempero}: ${quantidade} gramas</li>`;
+  }
+
+  // Exiba os resultados para o usuário
+  document.getElementById('resultado').innerHTML = `<ul>${listaTemperos}</ul>`;
+
+  // Atualize a função de compartilhamento
+  document.getElementById('btn-compartilhar').addEventListener('click', function() {
+    const resultadoCompartilhado = `Você precisa dos seguintes temperos para ${pesoCarne} gramas de ${tipoCarne}:\n\n${listaTemperos}`;
+    navigator.share({ text: resultadoCompartilhado });
+  });
+}

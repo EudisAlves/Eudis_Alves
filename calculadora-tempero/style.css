@@ -33,7 +33,7 @@ h1 {
     border-radius: 5px;
     padding: 8px;
     font-size: larger;
-    width: 70px;
+    width: 100px;
     background: #adadad44;
     color: antiquewhite;
 
@@ -69,6 +69,14 @@ h1 {
     font-size: larger;
     background-color: rgb(178, 230, 243);
     box-shadow: 0 0 58px #fcd706;
+}
+
+#btn-comp {
+    font-size: larger;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(13, 14, 13);
+    background: rgb(235, 102, 102);
 }
 
 #resultado {
