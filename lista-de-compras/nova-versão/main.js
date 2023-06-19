@@ -1,26 +1,28 @@
-var total = 0;
+var listaCompras = [];
 
 function calcularTotal() {
+    var total = 0;
     var itens = document.querySelectorAll("#lista-compras li");
 
-    total = 0; // Reinicializar o total antes de recalcular
-
     for (var i = 0; i < itens.length; i++) {
-        var quantidadeInput = itens[i].querySelector(".input-quantidade-item");
-        var valorInput = itens[i].querySelector(".input-valor");
+      var quantidadeInput = itens[i].querySelector(".input-quantidade-item");
+      var valorInput = itens[i].querySelector(".input-valor");
 
-        var quantidade = parseFloat(quantidadeInput.value);
-        var valor = parseFloat(valorInput.value.replace(",", "."));
+      var quantidade = parseFloat(quantidadeInput.value);
+      var valor = parseFloat(valorInput.value.replace(",", "."));
 
-        if (!isNaN(quantidade) && !isNaN(valor)) {
-            total += quantidade * valor;
-        }
+      if (!isNaN(quantidade) && !isNaN(valor)) {
+          total += quantidade * valor;
+      }
+  }
+
+    for (var i = 0; i < listaCompras.length; i++) {
+        var item = listaCompras[i];
+        total += item.quantidade * item.valor;
     }
 
     var totalElement = document.getElementById("total");
     totalElement.textContent = "R$ " + total.toFixed(2).replace(".", ",");
-
-    return total;
 }
 
 function adicionarItem() {
@@ -33,21 +35,28 @@ function adicionarItem() {
     var valor = parseFloat(valorInput.value.replace(",", "."));
 
     if (produto && !isNaN(quantidade) && !isNaN(valor)) {
-        var listaCompras = document.getElementById("lista-compras-nova");
+        var item = {
+            produto: produto,
+            quantidade: quantidade,
+            valor: valor
+        };
+
+        listaCompras.push(item);
+
         var novoItem = document.createElement("li");
         novoItem.textContent = produto + " - Quantidade: " + quantidade + " - Preço: R$ " + (valor).toFixed(2).replace(".", ",");
-        listaCompras.appendChild(novoItem);
+        var listaComprasElement = document.getElementById("lista-compras-nova");
+        listaComprasElement.appendChild(novoItem);
 
         produtoInput.value = "";
         quantidadeInput.value = "";
         valorInput.value = "";
 
-        total += quantidade * valor;
-
-        var totalElement = document.getElementById("total");
-        totalElement.textContent = "R$ " + total.toFixed(2).replace(".", ",");
+        calcularTotal();
     }
 }
 
 // Chamada inicial para calcular o total ao carregar a página
 calcularTotal();
+
+

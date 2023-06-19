@@ -5,8 +5,7 @@
 }
 
 body {
-    background: rgb(90,34,195);
-    background: linear-gradient(10deg, rgba(90,34,195,1) 23%, rgba(228,138,223,1) 100%);
+    background: rgb(195, 34, 34);
     margin: 10px;
 
 }
@@ -15,12 +14,12 @@ body h1 {
     margin: 10px;
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    color: rgb(138, 43,  226);
+    color: rgb(246, 244, 248);
 }
 
 body ul {
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Dancing Script', cursive;
     color: rgb(255, 255, 255);
 }
@@ -54,17 +53,16 @@ body li input {
 button {
     padding: 10px;
     margin: 10px;
-    border: 2px solid #ffffff;
+    border: 2px solid #050505;
     border-radius: 10px;
-    background: #f16de6;
-    box-shadow:  0 0 18px #fdfdfd;
-    color: rgb(8, 247, 235);
+    background: #fcf6fb;
+    color: rgb(8, 8, 8);
     cursor: pointer;
 }
 
 h3 {
     margin: 15px;
-    color: aqua;
+    color: rgb(0, 5, 5);
 }
 
 @media (max-width: 500px) {
