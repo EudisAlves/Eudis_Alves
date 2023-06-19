@@ -99,7 +99,8 @@
             <input type="text" class="input-valor" placeholder=" valor">
         </li>
     </ul>
-    
+    <ul id="lista-compras-nova"></ul>
+
     <div id="add-produto">
         <h4>Adicionar produtos</h4>
         <input type="text" id="produto" placeholder="Produto">
@@ -108,9 +109,10 @@
     </div>
     <div id="resultado"></div>
     
-    <button onclick="calcularTotal(), adicionarItem()">Calcular</button>
-    <h3><span id="total">R$ 0.00</span></h3>
-
+    <button onclick="calcularTotal()">Calcular</button>
+    <button onclick="adicionarItem()">Adicionar</button>
+    
+<h3><span id="total">R$ 0.00</span></h3>
     <ul id="lista-compras"></ul>
        
 </body>
