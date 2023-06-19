@@ -35,15 +35,14 @@ function adicionarItem() {
     if (produto && !isNaN(quantidade) && !isNaN(valor)) {
         var listaCompras = document.getElementById("lista-compras-nova");
         var novoItem = document.createElement("li");
-        var totalItem = (quantidade * valor).toFixed(2).replace(".", ",");
-        novoItem.textContent = produto + " - Quantidade: " + quantidade + " - Preço: R$ " + totalItem;
+        novoItem.textContent = produto + " - Quantidade: " + quantidade + " - Preço: R$ " + (valor).toFixed(2).replace(".", ",");
         listaCompras.appendChild(novoItem);
 
         produtoInput.value = "";
         quantidadeInput.value = "";
         valorInput.value = "";
 
-        total += parseFloat(totalItem.replace(",", "."));
+        total += quantidade * valor;
 
         var totalElement = document.getElementById("total");
         totalElement.textContent = "R$ " + total.toFixed(2).replace(".", ",");
