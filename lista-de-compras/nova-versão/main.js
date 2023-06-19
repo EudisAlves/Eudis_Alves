@@ -10,7 +10,7 @@ function calcularTotal() {
         var valorInput = itens[i].querySelector(".input-valor");
 
         var quantidade = parseFloat(quantidadeInput.value);
-        var valor = parseFloat(valorInput.value);
+        var valor = parseFloat(valorInput.value.replace(",", "."));
 
         if (!isNaN(quantidade) && !isNaN(valor)) {
             total += quantidade * valor;
@@ -18,7 +18,7 @@ function calcularTotal() {
     }
 
     var totalElement = document.getElementById("total");
-    totalElement.textContent = "R$ " + total.toFixed(2);
+    totalElement.textContent = "R$ " + total.toFixed(2).replace(".", ",");
 
     return total;
 }
@@ -30,12 +30,12 @@ function adicionarItem() {
 
     var produto = produtoInput.value;
     var quantidade = parseFloat(quantidadeInput.value);
-    var valor = parseFloat(valorInput.value);
+    var valor = parseFloat(valorInput.value.replace(",", "."));
 
     if (produto && !isNaN(quantidade) && !isNaN(valor)) {
         var listaCompras = document.getElementById("lista-compras-nova");
         var novoItem = document.createElement("li");
-        var totalItem = (quantidade * valor).toFixed(2);
+        var totalItem = (quantidade * valor).toFixed(2).replace(".", ",");
         novoItem.textContent = produto + " - Quantidade: " + quantidade + " - Preço: R$ " + totalItem;
         listaCompras.appendChild(novoItem);
 
@@ -43,10 +43,10 @@ function adicionarItem() {
         quantidadeInput.value = "";
         valorInput.value = "";
 
-        total += parseFloat(totalItem);
+        total += parseFloat(totalItem.replace(",", "."));
 
         var totalElement = document.getElementById("total");
-        totalElement.textContent = "R$ " + total.toFixed(2);
+        totalElement.textContent = "R$ " + total.toFixed(2).replace(".", ",");
     }
 }
 
