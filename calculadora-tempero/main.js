@@ -6,7 +6,7 @@ function calcularTempero(pesoCarne, tipoCarne) { // ele vai calcular a carne pel
       alho: pesoCarne * 0.015
     },
     'carne-bovina': {
-      'pó da alegria': pesoCarne * 0.06,
+      'pó da alegria': pesoCarne * 0.05,
       alho: pesoCarne * 0.025,
       óleo: pesoCarne * 0.004
     },
